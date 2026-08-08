@@ -143,3 +143,62 @@ document.addEventListener("keydown", (event) => {
     }
 
 });
+
+//---//
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async (event) => {
+
+        event.preventDefault();
+
+        const submitButton =
+            contactForm.querySelector('button[type="submit"]');
+
+        if (!submitButton) return;
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+
+        try {
+
+            const response = await fetch(
+                "https://formsubmit.co/ajax/48c91e4bfa76c5b0ab17fca4d2a5b740",
+                {
+                    method: "POST",
+                    body: new FormData(contactForm),
+                    headers: {
+                        Accept: "application/json"
+                    }
+                }
+            );
+
+            const result = await response.json();
+
+            console.log("FormSubmit response:", result);
+
+            if (response.ok && result.success) {
+
+                window.location.href =
+                    "/golden-touch-cleaning-service/thank-you.html";
+
+                return;
+            }
+
+            throw new Error("FormSubmit rejected the request.");
+
+        } catch (error) {
+
+            console.error("Form error:", error);
+
+            submitButton.disabled = false;
+            submitButton.textContent = "Send Request";
+
+            alert(
+                "Something went wrong. Please try again."
+            );
+        }
+
+    });
+}
