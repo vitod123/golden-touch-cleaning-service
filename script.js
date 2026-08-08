@@ -179,8 +179,9 @@ if (contactForm) {
 
             if (response.ok && result.success) {
 
-                window.location.href =
-                    "https://vitod123.github.io/golden-touch-cleaning-service/thank-you.html";
+                location.assign(
+                    "https://vitod123.github.io/golden-touch-cleaning-service/thank-you.html"
+                );
 
                 return;
             }
