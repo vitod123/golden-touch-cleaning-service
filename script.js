@@ -1,0 +1,145 @@
+/* =========================================================
+   GOLDEN TOUCH CLEANING
+   Main JavaScript
+   ========================================================= */
+
+
+/* ================= MOBILE MENU ================= */
+
+const menuButton = document.getElementById("menuButton");
+const nav = document.getElementById("nav");
+
+if (menuButton && nav) {
+
+    menuButton.addEventListener("click", () => {
+
+        nav.classList.toggle("active");
+
+    });
+
+
+    // Close menu after clicking a link
+
+    nav.querySelectorAll("a").forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            nav.classList.remove("active");
+
+        });
+
+    });
+
+}
+
+
+/* ================= HEADER SHADOW ================= */
+
+const header = document.getElementById("header");
+
+function handleHeader() {
+
+    if (!header) return;
+
+    if (window.scrollY > 20) {
+
+        header.classList.add("scrolled");
+
+    } else {
+
+        header.classList.remove("scrolled");
+
+    }
+
+}
+
+window.addEventListener("scroll", handleHeader);
+
+handleHeader();
+
+
+/* ================= BACK TO TOP ================= */
+
+const backToTop = document.getElementById("backToTop");
+
+function handleBackToTop() {
+
+    if (!backToTop) return;
+
+    if (window.scrollY > 500) {
+
+        backToTop.classList.add("show");
+
+    } else {
+
+        backToTop.classList.remove("show");
+
+    }
+
+}
+
+window.addEventListener("scroll", handleBackToTop);
+
+if (backToTop) {
+
+    backToTop.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
+
+
+/* ================= CURRENT YEAR ================= */
+
+const currentYear = document.getElementById("currentYear");
+
+if (currentYear) {
+
+    currentYear.textContent =
+        new Date().getFullYear();
+
+}
+
+
+/* ================= CONTACT FORM ================= */
+
+
+
+
+/* ================= IMAGE ERROR HANDLING ================= */
+
+document
+    .querySelectorAll("img")
+    .forEach((image) => {
+
+        image.addEventListener("error", () => {
+
+            image.style.background =
+                "#e8f5f5";
+
+            image.alt =
+                "Golden Touch Cleaning";
+
+        });
+
+    });
+
+
+/* ================= ESCAPE KEY ================= */
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+
+        if (nav) {
+            nav.classList.remove("active");
+        }
+
+    }
+
+});
