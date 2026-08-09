@@ -3173,16 +3173,12 @@ ul {
 /* ----------------------------------------------------- */
 
 /* =========================================================
-   SERVICE INFO MODAL
-   Learn More popup
-========================================================= */
+   SERVICE INFORMATION POPUP
+   ========================================================= */
 
 .service-modal {
     position: fixed;
-
     inset: 0;
-
-    z-index: 9999;
 
     display: flex;
     align-items: center;
@@ -3190,10 +3186,7 @@ ul {
 
     padding: 20px;
 
-    background: rgba(0, 47, 50, 0.72);
-
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    z-index: 9999;
 
     opacity: 0;
     visibility: hidden;
@@ -3209,14 +3202,25 @@ ul {
 }
 
 
-/* ---------- MODAL CARD ---------- */
+/* ---------- BACKGROUND ---------- */
+
+.service-modal-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 47, 50, 0.72);
+
+    backdrop-filter: blur(5px);
+}
+
+
+/* ---------- CARD ---------- */
 
 .service-modal-card {
     position: relative;
 
     width: min(100%, 560px);
-
-    max-height: calc(100vh - 40px);
+    max-height: 90vh;
 
     overflow-y: auto;
 
@@ -3224,19 +3228,15 @@ ul {
 
     border-radius: 12px;
 
-    box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.28);
+    padding: 40px 40px 35px;
 
-    transform: translateY(25px) scale(0.97);
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.30);
+
+    transform: translateY(25px) scale(0.96);
 
     transition:
         transform 0.3s ease;
-
-    scrollbar-width: thin;
-
-    scrollbar-color:
-        var(--gold)
-        #eef5f5;
 }
 
 .service-modal.active .service-modal-card {
@@ -3244,33 +3244,13 @@ ul {
 }
 
 
-/* ---------- TOP GOLD LINE ---------- */
-
-.service-modal-card::before {
-    content: "";
-
-    display: block;
-
-    width: 100%;
-    height: 5px;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--teal),
-            var(--gold),
-            var(--teal)
-        );
-}
-
-
-/* ---------- CLOSE BUTTON ---------- */
+/* ---------- CLOSE ---------- */
 
 .service-modal-close {
     position: absolute;
 
-    top: 18px;
-    right: 18px;
+    top: 14px;
+    right: 16px;
 
     width: 38px;
     height: 38px;
@@ -3279,23 +3259,21 @@ ul {
     place-items: center;
 
     border: 0;
-
     border-radius: 50%;
 
     background: var(--teal-light);
 
     color: var(--teal-dark);
 
-    font-size: 24px;
-
+    font-size: 28px;
     line-height: 1;
 
     cursor: pointer;
 
     transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        transform 0.25s ease;
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .service-modal-close:hover {
@@ -3307,43 +3285,48 @@ ul {
 }
 
 
-/* ---------- CONTENT ---------- */
+/* ---------- ICON ---------- */
 
-.service-modal-content {
-    padding: 38px 40px 35px;
+.service-modal-icon {
+    width: 65px;
+    height: 65px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    color: white;
+
+    font-size: 27px;
 }
 
-.service-modal-label {
-    display: inline-block;
 
-    margin-bottom: 8px;
+/* ---------- TEXT ---------- */
 
-    color: var(--gold);
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
+.service-modal-content .section-label {
+    margin-bottom: 7px;
 }
 
-.service-modal-title {
-    margin: 0 50px 15px 0;
+.service-modal-content h2 {
+    margin: 0 0 15px;
 
     color: var(--teal-dark);
 
     font-family: "Playfair Display", serif;
 
-    font-size: 32px;
+    font-size: clamp(28px, 5vw, 38px);
 
-    line-height: 1.15;
+    line-height: 1.1;
 
     text-transform: uppercase;
 }
 
-.service-modal-description {
+.service-modal-content > p {
     margin: 0 0 22px;
 
     color: var(--muted);
@@ -3354,51 +3337,31 @@ ul {
 }
 
 
-/* ---------- INCLUDED ---------- */
+/* ---------- LIST ---------- */
 
-.service-modal-included {
+.service-modal-content ul {
     margin: 0 0 25px;
 
-    padding: 20px;
+    padding: 0;
 
-    background: var(--off-white);
-
-    border: 1px solid var(--border);
-
-    border-radius: 7px;
+    list-style: none;
 }
 
-.service-modal-included h4 {
-    margin: 0 0 13px;
-
-    color: var(--teal-dark);
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 17px;
-}
-
-.service-modal-list {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 9px 20px;
-}
-
-.service-modal-list div {
+.service-modal-content li {
     position: relative;
 
-    padding-left: 18px;
+    padding-left: 22px;
 
-    color: #687778;
+    margin-bottom: 10px;
 
-    font-size: 11px;
+    color: var(--text);
+
+    font-size: 12px;
 
     line-height: 1.5;
 }
 
-.service-modal-list div::before {
+.service-modal-content li::before {
     content: "✓";
 
     position: absolute;
@@ -3408,42 +3371,24 @@ ul {
 
     color: var(--gold);
 
-    font-weight: 900;
+    font-weight: 800;
 }
 
 
-/* ---------- BOTTOM ---------- */
+/* ---------- BUTTON ---------- */
 
-.service-modal-bottom {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 15px;
-
-    padding-top: 20px;
-
-    border-top: 1px solid var(--border);
+.service-modal-actions {
+    padding-top: 5px;
 }
 
-.service-modal-note {
-    color: var(--muted);
-
-    font-size: 10px;
-
-    line-height: 1.5;
-}
-
-.service-modal-bottom .btn {
-    flex-shrink: 0;
+.service-modal-actions .btn {
+    width: auto;
 }
 
 
 /* =========================================================
    MOBILE
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 700px) {
 
@@ -3454,92 +3399,55 @@ ul {
     .service-modal-card {
         width: 100%;
 
-        max-height: calc(100vh - 30px);
+        max-height: 88vh;
+
+        padding: 32px 22px 25px;
 
         border-radius: 12px;
     }
 
-    .service-modal-content {
-        padding: 32px 22px 25px;
-    }
-
-    .service-modal-close {
-        top: 14px;
-        right: 14px;
-
-        width: 36px;
-        height: 36px;
+    .service-modal-icon {
+        width: 55px;
+        height: 55px;
 
         font-size: 22px;
+
+        margin-bottom: 14px;
     }
 
-    .service-modal-title {
+    .service-modal-content h2 {
         font-size: 27px;
-
-        margin-right: 45px;
     }
 
-    .service-modal-description {
+    .service-modal-content > p {
         font-size: 12px;
-
-        line-height: 1.7;
     }
 
-    .service-modal-included {
-        padding: 16px;
+    .service-modal-content li {
+        font-size: 11px;
     }
 
-    .service-modal-list {
-        grid-template-columns: 1fr;
-
-        gap: 8px;
-    }
-
-    .service-modal-list div {
-        font-size: 10px;
-    }
-
-    .service-modal-bottom {
-        align-items: stretch;
-
-        flex-direction: column;
-    }
-
-    .service-modal-bottom .btn {
+    .service-modal-actions .btn {
         width: 100%;
     }
 
 }
 
 
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
+/* ---------- VERY SMALL PHONES ---------- */
 
-@media (max-width: 450px) {
+@media (max-width: 390px) {
 
     .service-modal {
         padding: 10px;
     }
 
-    .service-modal-content {
-        padding: 28px 18px 20px;
+    .service-modal-card {
+        padding: 30px 18px 22px;
     }
 
-    .service-modal-title {
+    .service-modal-content h2 {
         font-size: 24px;
-    }
-
-    .service-modal-description {
-        font-size: 11px;
-    }
-
-    .service-modal-included {
-        padding: 14px;
-    }
-
-    .service-modal-list div {
-        font-size: 9px;
     }
 
 }

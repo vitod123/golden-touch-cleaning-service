@@ -154,14 +154,12 @@ document.addEventListener("keydown", (event) => {
 
 
 /* =========================================================
-   SERVICE INFO MODAL
-========================================================= */
+   SERVICE INFORMATION POPUP
+   ========================================================= */
 
 const serviceModal = document.getElementById("serviceModal");
 const serviceModalClose = document.getElementById("serviceModalClose");
-
-const serviceModalLabel =
-    document.getElementById("serviceModalLabel");
+const serviceModalOverlay = document.querySelector(".service-modal-overlay");
 
 const serviceModalTitle =
     document.getElementById("serviceModalTitle");
@@ -172,206 +170,94 @@ const serviceModalDescription =
 const serviceModalList =
     document.getElementById("serviceModalList");
 
-const serviceModalNote =
-    document.getElementById("serviceModalNote");
+const serviceModalIcon =
+    document.getElementById("serviceModalIcon");
 
-const serviceModalQuote =
-    document.getElementById("serviceModalQuote");
+const serviceModalButton =
+    document.getElementById("serviceModalButton");
 
 
-/* =========================================================
-   SERVICE INFORMATION
-========================================================= */
+const servicesInfo = {
 
-const serviceInformation = {
-
-    residential: {
-
-        label: "Residential Cleaning",
-
-        title: "Residential Cleaning",
+    regular: {
+        icon: "✨",
+        label: "REGULAR CLEANING",
+        title: "Regular Cleaning",
 
         description:
-            "Enjoy a fresh, comfortable and spotless home without spending your valuable time cleaning. Our residential cleaning service is designed around the needs of your home and family.",
+            "Our regular cleaning service keeps your home fresh, clean and comfortable on a consistent basis.",
 
         items: [
+            "Dusting and wiping surfaces",
+            "Vacuuming carpets and floors",
+            "Mopping hard floors",
             "Kitchen cleaning",
             "Bathroom cleaning",
-            "Dusting and surface cleaning",
-            "Vacuuming all accessible areas",
-            "Mopping floors",
-            "Trash removal",
-            "General tidying",
-            "High-touch surface cleaning"
-        ],
-
-        note:
-            "Perfect for regular weekly, bi-weekly or one-time cleaning."
-    },
-
-
-    commercial: {
-
-        label: "Commercial Cleaning",
-
-        title: "Commercial Cleaning",
-
-        description:
-            "Keep your workplace clean, welcoming and professional with dependable commercial cleaning services tailored to your business.",
-
-        items: [
-            "Office cleaning",
-            "Reception and common areas",
-            "Break room cleaning",
-            "Bathroom sanitation",
-            "Floor cleaning",
-            "Dusting and surface care",
-            "Trash removal",
-            "High-touch area cleaning"
-        ],
-
-        note:
-            "Cleaning schedules can be tailored to your business needs."
+            "Trash removal"
+        ]
     },
 
 
     deep: {
-
-        label: "Deep Cleaning",
-
+        icon: "🧽",
+        label: "DEEP CLEANING",
         title: "Deep Cleaning",
 
         description:
-            "Our deep cleaning service gives your home extra attention in areas that are often missed during regular cleaning. It is ideal when your space needs a more detailed refresh.",
+            "A detailed top-to-bottom cleaning designed for homes that need extra attention and a deeper level of care.",
 
         items: [
-            "Detailed kitchen cleaning",
-            "Detailed bathroom cleaning",
-            "Baseboard cleaning",
-            "Doors and trim",
             "Detailed dusting",
+            "Deep kitchen cleaning",
+            "Deep bathroom cleaning",
+            "Baseboards and doors",
             "Hard-to-reach areas",
-            "Floor detailing",
-            "Extra attention to buildup"
-        ],
-
-        note:
-            "Great for seasonal cleaning or giving your home a complete refresh."
+            "Detailed floor cleaning"
+        ]
     },
 
 
     move: {
-
-        label: "Move-In / Move-Out",
-
-        title: "Move-In / Move-Out Cleaning",
+        icon: "🏠",
+        label: "MOVE IN / MOVE OUT",
+        title: "Move In / Move Out Cleaning",
 
         description:
-            "Moving can be stressful enough. Let us take care of the cleaning so your previous or new home is fresh, clean and ready for its next chapter.",
+            "A complete cleaning service to help make your move easier and leave the property fresh and ready.",
 
         items: [
-            "Kitchen cleaning",
+            "Complete kitchen cleaning",
             "Bathroom cleaning",
             "Cabinet cleaning",
             "Floor cleaning",
-            "Dusting throughout",
-            "Doors and trim",
-            "Empty-room cleaning",
-            "Final detailed cleaning"
-        ],
+            "Dusting throughout the property",
+            "Final detail cleaning"
+        ]
+    },
 
-        note:
-            "Ideal before moving in or after moving out."
+
+    commercial: {
+        icon: "🏢",
+        label: "COMMERCIAL CLEANING",
+        title: "Commercial Cleaning",
+
+        description:
+            "Professional cleaning solutions for offices, businesses and commercial spaces.",
+
+        items: [
+            "Office cleaning",
+            "Workplace surface cleaning",
+            "Floor care",
+            "Restroom cleaning",
+            "Trash removal",
+            "Customized cleaning plans"
+        ]
     }
 
 };
 
 
-/* =========================================================
-   OPEN MODAL
-========================================================= */
-
-function openServiceModal(serviceName) {
-
-    if (!serviceModal) return;
-
-    const service = serviceInformation[serviceName];
-
-    if (!service) return;
-
-
-    serviceModalLabel.textContent =
-        service.label;
-
-    serviceModalTitle.textContent =
-        service.title;
-
-    serviceModalDescription.textContent =
-        service.description;
-
-    serviceModalNote.textContent =
-        service.note;
-
-
-    serviceModalList.innerHTML = "";
-
-
-    service.items.forEach((item) => {
-
-        const itemElement =
-            document.createElement("div");
-
-        itemElement.textContent = item;
-
-        serviceModalList.appendChild(itemElement);
-
-    });
-
-
-    serviceModal.classList.add("active");
-
-    serviceModal.setAttribute(
-        "aria-hidden",
-        "false"
-    );
-
-
-    document.body.style.overflow = "hidden";
-
-
-    setTimeout(() => {
-
-        if (serviceModalClose) {
-            serviceModalClose.focus();
-        }
-
-    }, 50);
-}
-
-
-/* =========================================================
-   CLOSE MODAL
-========================================================= */
-
-function closeServiceModal() {
-
-    if (!serviceModal) return;
-
-    serviceModal.classList.remove("active");
-
-    serviceModal.setAttribute(
-        "aria-hidden",
-        "true"
-    );
-
-
-    document.body.style.overflow = "";
-}
-
-
-/* =========================================================
-   LEARN MORE BUTTONS
-========================================================= */
+/* ---------- OPEN ---------- */
 
 document
     .querySelectorAll(".service-learn-more")
@@ -384,16 +270,78 @@ document
             const serviceName =
                 button.dataset.service;
 
-            openServiceModal(serviceName);
+            const service =
+                servicesInfo[serviceName];
+
+            if (!service) {
+
+                console.error(
+                    "Service not found:",
+                    serviceName
+                );
+
+                return;
+            }
+
+
+            /* Fill popup */
+
+            serviceModalIcon.textContent =
+                service.icon;
+
+            document
+                .getElementById("serviceModalLabel")
+                .textContent =
+                service.label;
+
+            serviceModalTitle.textContent =
+                service.title;
+
+            serviceModalDescription.textContent =
+                service.description;
+
+
+            /* Create list */
+
+            serviceModalList.innerHTML = "";
+
+            service.items.forEach((item) => {
+
+                const li =
+                    document.createElement("li");
+
+                li.textContent = item;
+
+                serviceModalList.appendChild(li);
+
+            });
+
+
+            /* Show */
+
+            serviceModal.classList.add("active");
+
+            document.body.style.overflow = "hidden";
 
         });
 
     });
 
 
-/* =========================================================
-   CLOSE BUTTON
-========================================================= */
+/* ---------- CLOSE FUNCTION ---------- */
+
+function closeServiceModal() {
+
+    if (!serviceModal) return;
+
+    serviceModal.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* ---------- CLOSE BUTTON ---------- */
 
 if (serviceModalClose) {
 
@@ -405,65 +353,42 @@ if (serviceModalClose) {
 }
 
 
-/* =========================================================
-   CLICK OUTSIDE
-========================================================= */
+/* ---------- CLICK OUTSIDE ---------- */
 
-if (serviceModal) {
+if (serviceModalOverlay) {
 
-    serviceModal.addEventListener(
+    serviceModalOverlay.addEventListener(
         "click",
-        (event) => {
-
-            if (
-                event.target === serviceModal
-            ) {
-
-                closeServiceModal();
-
-            }
-
-        }
+        closeServiceModal
     );
 
 }
 
 
-/* =========================================================
-   ESCAPE KEY
-========================================================= */
+/* ---------- ESCAPE ---------- */
 
-document.addEventListener(
-    "keydown",
-    (event) => {
+document.addEventListener("keydown", (event) => {
 
-        if (
-            event.key === "Escape" &&
-            serviceModal &&
-            serviceModal.classList.contains("active")
-        ) {
+    if (
+        event.key === "Escape" &&
+        serviceModal &&
+        serviceModal.classList.contains("active")
+    ) {
 
-            closeServiceModal();
-
-        }
+        closeServiceModal();
 
     }
-);
+
+});
 
 
-/* =========================================================
-   CLOSE MODAL WHEN GET A QUOTE IS CLICKED
-========================================================= */
+/* ---------- QUOTE BUTTON ---------- */
 
-if (serviceModalQuote) {
+if (serviceModalButton) {
 
-    serviceModalQuote.addEventListener(
+    serviceModalButton.addEventListener(
         "click",
-        () => {
-
-            closeServiceModal();
-
-        }
+        closeServiceModal
     );
 
 }
