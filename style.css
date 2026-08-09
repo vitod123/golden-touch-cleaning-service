@@ -4052,3 +4052,142 @@ ul {
 
 /* --------------- */
 
+/* =========================================
+   DESKTOP LOOK ON MOBILE — TEST VERSION
+   Нічого попереднього не видаляємо
+========================================= */
+
+@media (max-width: 700px) {
+
+  /* Загальна ширина сторінки */
+  body {
+    min-width: 1100px;
+  }
+
+  /* Контент залишається desktop-width */
+  .wrap {
+    width: 1180px;
+    max-width: 1180px;
+  }
+
+  /* Навігація як на desktop */
+  nav {
+    display: flex;
+  }
+
+  .hamb {
+    display: none;
+  }
+
+  .top-phone {
+    display: inline-flex;
+  }
+
+  .nav {
+    height: 78px;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 610px;
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1.02fr .98fr;
+    min-height: 610px;
+  }
+
+  .hero-photo {
+    height: 610px;
+  }
+
+  .hero h1 {
+    font-size: 62px;
+  }
+
+  /* SERVICES */
+  .service-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* WHY CHOOSE US */
+  .difference-grid {
+    grid-template-columns: 1.25fr repeat(4, 1fr);
+  }
+
+  .difference-title {
+    grid-column: auto;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    grid-template-columns: 1fr 1.15fr .72fr;
+  }
+
+  .about-logo {
+    display: block;
+  }
+
+  /* GALLERY */
+  .gallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  /* REVIEWS */
+  .reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* QUOTE */
+  .quote-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .quote-form .two {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* FOOTER */
+  .footer-grid {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 460px) {
+
+  body {
+    min-width: 1100px;
+  }
+
+  .wrap {
+    width: 1180px;
+    max-width: 1180px;
+  }
+
+  .hero h1 {
+    font-size: 62px;
+  }
+
+  .section {
+    padding: 74px 0;
+  }
+
+  .section-title h2 {
+    font-size: 38px;
+  }
+
+  .about-copy h2,
+  .quote h2 {
+    font-size: 34px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
