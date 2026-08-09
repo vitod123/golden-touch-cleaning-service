@@ -3078,3 +3078,390 @@ ul {
 }
 
 /* --------------- */
+
+/* =========================================
+   DESKTOP LOOK ON MOBILE — TEST VERSION
+   Нічого попереднього не видаляємо
+========================================= */
+
+@media (max-width: 700px) {
+
+  /* Загальна ширина сторінки */
+  body {
+    min-width: 1100px;
+  }
+
+  /* Контент залишається desktop-width */
+  .wrap {
+    width: 1180px;
+    max-width: 1180px;
+  }
+
+  /* Навігація як на desktop */
+  nav {
+    display: flex;
+  }
+
+  .hamb {
+    display: none;
+  }
+
+  .top-phone {
+    display: inline-flex;
+  }
+
+  .nav {
+    height: 78px;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 610px;
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1.02fr .98fr;
+    min-height: 610px;
+  }
+
+  .hero-photo {
+    height: 610px;
+  }
+
+  .hero h1 {
+    font-size: 62px;
+  }
+
+  /* SERVICES */
+  .service-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* WHY CHOOSE US */
+  .difference-grid {
+    grid-template-columns: 1.25fr repeat(4, 1fr);
+  }
+
+  .difference-title {
+    grid-column: auto;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    grid-template-columns: 1fr 1.15fr .72fr;
+  }
+
+  .about-logo {
+    display: block;
+  }
+
+  /* GALLERY */
+  .gallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  /* REVIEWS */
+  .reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* QUOTE */
+  .quote-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .quote-form .two {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* FOOTER */
+  .footer-grid {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 460px) {
+
+  body {
+    min-width: 1100px;
+  }
+
+  .wrap {
+    width: 1180px;
+    max-width: 1180px;
+  }
+
+  .hero h1 {
+    font-size: 62px;
+  }
+
+  .section {
+    padding: 74px 0;
+  }
+
+  .section-title h2 {
+    font-size: 38px;
+  }
+
+  .about-copy h2,
+  .quote h2 {
+    font-size: 34px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* ------------- */
+
+/* =========================================
+   MOBILE FIXES — HEADER + CONTACT FORM
+   Add this at the VERY END of styles.css
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  /* ---------- HEADER ---------- */
+
+  .topbar {
+    border: 0 !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .nav {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .brand {
+    border: 0 !important;
+  }
+
+
+  /* ---------- CONTACT / QUOTE SECTION ---------- */
+
+  .quote {
+    padding: 55px 0 !important;
+  }
+
+  .quote-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  .quote-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .quote-copy h2,
+  .quote h2 {
+    font-size: 30px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .quote-copy p,
+  .quote p {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    max-width: 100% !important;
+  }
+
+  .contact-list {
+    width: 100% !important;
+    margin-top: 20px !important;
+    gap: 12px !important;
+  }
+
+  .contact-list a,
+  .contact-list span {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    word-break: break-word !important;
+  }
+
+
+  /* ---------- FORM ---------- */
+
+  .quote-form {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    border-radius: 14px !important;
+  }
+
+  .quote-form .two {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
+  .quote-form input,
+  .quote-form select,
+  .quote-form textarea {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    font-size: 14px !important;
+    padding: 13px 14px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .quote-form textarea {
+    min-height: 130px !important;
+  }
+
+  .quote-form .btn {
+    width: 100% !important;
+    min-height: 46px !important;
+  }
+}
+
+
+/* ---------- EXTRA SMALL PHONES ---------- */
+
+@media (max-width: 460px) {
+
+  .nav {
+    height: 68px !important;
+  }
+
+  .brand img {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .quote {
+    padding: 45px 0 !important;
+  }
+
+  .quote-form {
+    padding: 17px !important;
+  }
+
+  .quote-form input,
+  .quote-form select,
+  .quote-form textarea {
+    font-size: 14px !important;
+  }
+}
+
+/* -----------------------------------------------  */
+
+/* =========================================
+   MOBILE HEADER — FINAL FIX
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  /* Header must always have a solid background */
+  .topbar {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+
+    background: #043f44 !important;
+    background-color: #043f44 !important;
+
+    opacity: 1 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15) !important;
+    border: none !important;
+  }
+
+  /* Remove transparency / blur */
+  .topbar::before,
+  .topbar::after {
+    display: none !important;
+  }
+
+  .nav {
+    background: #043f44 !important;
+    min-height: 68px !important;
+    height: 68px !important;
+    border: none !important;
+  }
+
+  /* Logo + brand always visible */
+  .brand {
+    color: #fff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .brand b {
+    color: #d6aa4a !important;
+  }
+
+  .brand small {
+    color: #fff !important;
+  }
+
+  .brand img {
+    background: #fff !important;
+    opacity: 1 !important;
+  }
+
+  /* Mobile menu button */
+  .hamb {
+    display: block !important;
+    color: #fff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    border: none !important;
+    font-size: 28px !important;
+  }
+
+  /* Don't allow desktop navigation to interfere */
+  nav {
+    display: none !important;
+  }
+
+  .top-phone {
+    display: none !important;
+  }
+}
+
+
+/* Smaller phones */
+@media (max-width: 460px) {
+
+  .topbar {
+    min-height: 64px !important;
+  }
+
+  .nav {
+    height: 64px !important;
+    min-height: 64px !important;
+  }
+
+  .brand img {
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  .brand b {
+    font-size: 13px !important;
+  }
+
+  .brand small {
+    font-size: 7px !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  .hamb {
+    font-size: 27px !important;
+  }
+}
