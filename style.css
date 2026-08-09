@@ -2342,3 +2342,494 @@ ul {
         gap: 12px;
     }
 }
+
+
+/* ------ */
+
+/* =========================================================
+   MOBILE DESKTOP-STYLE LAYOUT
+   Added override — do not remove previous CSS
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    /* ================= GENERAL ================= */
+
+    .container {
+        width: calc(100% - 30px);
+        max-width: 1180px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading h2,
+    .about-content h2,
+    .contact-info h2 {
+        font-size: 32px;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    .header-inner {
+        height: 76px;
+    }
+
+    .logo strong {
+        font-size: 14px;
+    }
+
+    .logo small {
+        font-size: 8px;
+    }
+
+    .logo-icon {
+        font-size: 30px;
+    }
+
+    .menu-button {
+        width: 44px;
+        height: 44px;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+        min-height: 700px;
+        padding-top: 76px;
+        align-items: center;
+    }
+
+    .hero-background {
+        background-position: center right;
+    }
+
+    .hero-background::after {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(234,246,246,0.98) 0%,
+                rgba(234,246,246,0.92) 55%,
+                rgba(234,246,246,0.35) 100%
+            );
+    }
+
+    .hero-content {
+        width: calc(100% - 30px);
+    }
+
+    .hero-text {
+        max-width: 570px;
+        padding: 50px 0;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        line-height: 0.98;
+    }
+
+    .hero-text > p {
+        max-width: 500px;
+        font-size: 14px;
+        margin: 24px 0;
+    }
+
+    .hero-features {
+        gap: 20px;
+        margin-bottom: 28px;
+    }
+
+    .hero-features > div {
+        font-size: 9px;
+    }
+
+    .feature-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .hero-buttons .btn {
+        width: auto;
+    }
+
+
+    /* ================= SERVICES ================= */
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .service-image {
+        height: 185px;
+    }
+
+    .service-content {
+        padding: 35px 20px 22px;
+    }
+
+    .service-content h3 {
+        font-size: 19px;
+    }
+
+    .service-content p {
+        font-size: 11px;
+    }
+
+    .service-content li {
+        font-size: 9px;
+    }
+
+
+    /* ================= WHY ================= */
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .why-title {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .why-title p {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .why-item h3 {
+        font-size: 16px;
+    }
+
+    .why-item p {
+        font-size: 9px;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 430px;
+    }
+
+    .about-badge {
+        right: -15px;
+        bottom: 25px;
+    }
+
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+    .about-content p {
+        font-size: 12px;
+    }
+
+
+    /* ================= GALLERY ================= */
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .gallery img {
+        height: 170px;
+    }
+
+    .gallery img:nth-child(4),
+    .gallery img:nth-child(5) {
+        display: block;
+    }
+
+
+    /* ================= REVIEWS ================= */
+
+    .reviews-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .review-card {
+        padding: 25px 18px;
+    }
+
+    .review-card p {
+        font-size: 11px;
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .contact-grid {
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 35px;
+    }
+
+    .contact-form-wrapper {
+        padding: 30px;
+    }
+
+    .contact-info h2 {
+        font-size: 32px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   Keep desktop proportions, but prevent overflow
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: 720px;
+    }
+
+    .hero-text {
+        padding: 45px 0;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-text > p {
+        font-size: 13px;
+    }
+
+    .hero-features {
+        gap: 12px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+
+    /* Services */
+
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .service-image {
+        height: 150px;
+    }
+
+    .service-content {
+        padding: 32px 12px 18px;
+    }
+
+    .service-content h3 {
+        font-size: 16px;
+    }
+
+    .service-content p {
+        font-size: 10px;
+        min-height: auto;
+    }
+
+    .service-content li {
+        font-size: 8px;
+    }
+
+    .small-button {
+        font-size: 8px;
+        padding: 8px 12px;
+    }
+
+
+    /* Why */
+
+    .why-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 12px;
+    }
+
+    .why-title {
+        grid-column: 1 / -1;
+    }
+
+
+    /* About */
+
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .about-image img {
+        height: 360px;
+    }
+
+    .about-badge {
+        right: -8px;
+        bottom: 15px;
+        padding: 12px;
+    }
+
+    .about-badge strong {
+        font-size: 24px;
+    }
+
+    .about-badge span {
+        font-size: 7px;
+    }
+
+    .about-content h2 {
+        font-size: 26px;
+    }
+
+    .about-content p {
+        font-size: 10px;
+    }
+
+    .contact-details a {
+        font-size: 9px;
+    }
+
+
+    /* Gallery */
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery img {
+        height: 145px;
+    }
+
+
+    /* Reviews */
+
+    .reviews-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .review-card {
+        padding: 20px 10px;
+    }
+
+    .stars {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .review-card p {
+        font-size: 9px;
+    }
+
+    .review-card strong {
+        font-size: 9px;
+    }
+
+
+    /* Contact */
+
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .contact-info h2 {
+        font-size: 25px;
+    }
+
+    .contact-info > p {
+        font-size: 10px;
+    }
+
+    .contact-form-wrapper {
+        padding: 18px 12px;
+    }
+
+    .contact-form h3 {
+        font-size: 21px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-section-title {
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 10px;
+        padding: 10px;
+    }
+
+
+    /* Footer */
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 15px;
+    }
+
+    .footer-column a,
+    .footer-column span {
+        font-size: 9px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
