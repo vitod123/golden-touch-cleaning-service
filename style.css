@@ -3536,3 +3536,516 @@ ul {
     }
 
 }
+
+/* ----- */
+
+/* =========================================================
+   MOBILE FIX — NEW ABOUT PAGE
+   Додати В КІНЕЦЬ styles.css
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* Загальні налаштування */
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .wrap {
+    width: calc(100% - 32px);
+    max-width: none;
+  }
+
+  /* ---------- HEADER ---------- */
+
+  .topbar {
+    position: sticky;
+    top: 0;
+  }
+
+  .nav {
+    height: 68px;
+    gap: 10px;
+  }
+
+  .brand {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .brand img {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+  }
+
+  .brand b {
+    font-size: 13px;
+    line-height: 1.1;
+  }
+
+  .brand small {
+    font-size: 7px;
+    letter-spacing: 1.3px;
+    margin-top: 2px;
+  }
+
+  .hamb {
+    display: block;
+    margin-left: auto;
+    padding: 5px;
+    font-size: 25px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .top-phone {
+    display: none;
+  }
+
+
+  /* ---------- ABOUT HERO ---------- */
+
+  .about-hero,
+  .about-page-hero {
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  .about-hero .hero-inner,
+  .about-page-hero .hero-inner {
+    display: flex !important;
+    flex-direction: column;
+    min-height: auto !important;
+    padding: 45px 0 0;
+  }
+
+  .about-hero .hero-copy,
+  .about-page-hero .hero-copy {
+    width: 100%;
+    padding: 0 0 30px;
+  }
+
+  .about-hero h1,
+  .about-page-hero h1 {
+    font-size: 38px !important;
+    line-height: 1.05;
+    margin-bottom: 16px;
+  }
+
+  .about-hero .lead,
+  .about-page-hero .lead {
+    font-size: 14px;
+    line-height: 1.65;
+    max-width: 100%;
+  }
+
+  .about-hero .hero-photo,
+  .about-page-hero .hero-photo {
+    width: 100%;
+    height: 300px !important;
+    min-height: 0 !important;
+    margin: 0;
+  }
+
+  .about-hero .hero-photo img,
+  .about-page-hero .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+
+  /* ---------- SECTIONS ---------- */
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-title {
+    margin-bottom: 25px;
+  }
+
+  .section-title p {
+    font-size: 10px;
+    letter-spacing: 1.6px;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+    line-height: 1.1;
+    margin: 6px 0 10px;
+  }
+
+  .section-title span {
+    display: block;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+
+  /* ---------- ABOUT CONTENT ---------- */
+
+  .about-grid {
+    display: flex !important;
+    flex-direction: column;
+    gap: 25px;
+    align-items: stretch;
+  }
+
+  .about-photo {
+    width: 100%;
+    order: 1;
+  }
+
+  .about-copy {
+    width: 100%;
+    order: 2;
+  }
+
+  .about-logo {
+    display: none !important;
+  }
+
+  .about-photo img {
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .about-copy h2 {
+    font-size: 29px;
+    line-height: 1.1;
+    margin: 0 0 14px;
+  }
+
+  .about-copy p {
+    font-size: 13px;
+    line-height: 1.75;
+    margin: 0 0 12px;
+  }
+
+
+  /* ---------- SERVICES ---------- */
+
+  .service-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .service-card {
+    width: 100%;
+    border-radius: 13px;
+  }
+
+  .service-card > img {
+    height: 190px;
+  }
+
+  .circle-icon {
+    width: 55px;
+    height: 55px;
+    margin-top: -27px;
+  }
+
+  .service-pad {
+    padding: 10px 18px 20px;
+  }
+
+  .service-pad h3 {
+    font-size: 14px;
+  }
+
+  .service-pad p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .service-pad ul {
+    min-height: auto;
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+
+  /* ---------- DIFFERENCE ---------- */
+
+  .difference {
+    padding: 48px 0;
+  }
+
+  .difference-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0;
+  }
+
+  .difference-title {
+    grid-column: auto !important;
+    margin-bottom: 15px;
+  }
+
+  .difference-title h2 {
+    font-size: 29px;
+    line-height: 1.1;
+  }
+
+  .diff-item {
+    border-left: 0;
+    border-top: 1px solid rgba(255,255,255,.18);
+    padding: 20px 10px;
+  }
+
+  .diff-item:first-of-type {
+    border-top: 0;
+  }
+
+  .diff-item i {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 9px;
+  }
+
+  .diff-item h3 {
+    font-size: 13px;
+  }
+
+  .diff-item p {
+    font-size: 11px;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+
+  /* ---------- GALLERY ---------- */
+
+  .gallery {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 9px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 145px;
+    border-radius: 9px;
+  }
+
+
+  /* ---------- REVIEWS ---------- */
+
+  .reviews-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+  }
+
+  .reviews-grid article {
+    padding: 20px;
+  }
+
+  .reviews-grid p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+
+  /* ---------- QUOTE / CONTACT ---------- */
+
+  .quote {
+    padding: 50px 0;
+  }
+
+  .quote-grid {
+    display: flex !important;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .quote h2 {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .quote p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .contact-list {
+    font-size: 12px;
+  }
+
+  .quote-form {
+    width: 100%;
+    padding: 18px;
+    border-radius: 13px;
+  }
+
+  .quote-form .two {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 0;
+  }
+
+  .quote-form input,
+  .quote-form select,
+  .quote-form textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .quote-form textarea {
+    min-height: 120px;
+  }
+
+  .quote-form .btn {
+    width: 100%;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  footer {
+    padding: 30px 0 15px;
+  }
+
+  .footer-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 25px;
+  }
+
+  .footer-brand img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .footer-grid h4 {
+    margin-bottom: 3px;
+  }
+
+  .copyright {
+    line-height: 1.5;
+  }
+
+
+  /* ---------- MODAL ---------- */
+
+  .modal {
+    padding: 15px;
+  }
+
+  .modal-card {
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 23px 19px;
+    border-radius: 14px;
+  }
+
+  .modal-card h3 {
+    font-size: 26px;
+    padding-right: 25px;
+  }
+
+  .modal-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+
+  /* ---------- BUTTONS ---------- */
+
+  .cta-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .cta-row .btn {
+    width: 100%;
+  }
+
+  .btn {
+    min-height: 46px;
+    font-size: 11px;
+  }
+
+
+  /* ---------- WATER DECORATION ---------- */
+
+  .water-a,
+  .water-b,
+  .water-c,
+  .water-d {
+    opacity: .45;
+    transform: scale(.7) rotate(-8deg);
+  }
+}
+
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 390px) {
+
+  .wrap {
+    width: calc(100% - 26px);
+  }
+
+  .nav {
+    height: 64px;
+  }
+
+  .brand img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .brand b {
+    font-size: 12px;
+  }
+
+  .brand small {
+    font-size: 6.5px;
+  }
+
+  .hero h1,
+  .about-hero h1,
+  .about-page-hero h1 {
+    font-size: 34px !important;
+  }
+
+  .hero-photo,
+  .about-hero .hero-photo,
+  .about-page-hero .hero-photo {
+    height: 270px !important;
+  }
+
+  .section {
+    padding: 42px 0;
+  }
+
+  .section-title h2 {
+    font-size: 27px;
+  }
+
+  .about-copy h2,
+  .difference-title h2,
+  .quote h2 {
+    font-size: 27px;
+  }
+
+  .gallery img {
+    height: 125px;
+  }
+}
