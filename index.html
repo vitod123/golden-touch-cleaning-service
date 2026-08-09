@@ -144,7 +144,14 @@
                   <li>Move-In / Move-Out Cleaning</li>
                 </ul>
 
-                <a href="#contact" class="small-button"> Learn More </a>
+                <!-- <a href="#contact" class="small-button"> Learn More </a> -->
+                <a
+                  href="#"
+                  class="small-button service-learn-more"
+                  data-service="residential"
+                >
+                  Learn More
+                </a>
               </div>
             </article>
 
@@ -172,7 +179,14 @@
                   <li>Industrial Cleaning</li>
                 </ul>
 
-                <a href="#contact" class="small-button"> Learn More </a>
+                <!-- <a href="#contact" class="small-button"> Learn More </a> -->
+                <a
+                  href="#"
+                  class="small-button service-learn-more"
+                  data-service="commercial"
+                >
+                  Learn More
+                </a>
               </div>
             </article>
 
@@ -203,7 +217,14 @@
                   <li>Detailed Cleaning</li>
                 </ul>
 
-                <a href="#contact" class="small-button"> Learn More </a>
+                <!-- <a href="#contact" class="small-button"> Learn More </a> -->
+                <a
+                  href="#"
+                  class="small-button service-learn-more"
+                  data-service="deep"
+                >
+                  Learn More
+                </a>
               </div>
             </article>
 
@@ -231,7 +252,14 @@
                   <li>Real Estate Cleaning</li>
                 </ul>
 
-                <a href="#contact" class="small-button"> Learn More </a>
+                <!-- <a href="#contact" class="small-button"> Learn More </a> -->
+                <a
+                  href="#"
+                  class="small-button service-learn-more"
+                  data-service="move"
+                >
+                  Learn More
+                </a>
               </div>
             </article>
           </div>
@@ -848,5 +876,59 @@
     </button>
 
     <script src="./script.js"></script>
+
+    <!-- =========================================================
+     SERVICE INFO MODAL
+========================================================= -->
+
+    <div class="service-modal" id="serviceModal" aria-hidden="true">
+      <div
+        class="service-modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="serviceModalTitle"
+      >
+        <button
+          type="button"
+          class="service-modal-close"
+          id="serviceModalClose"
+          aria-label="Close"
+        >
+          ×
+        </button>
+
+        <div class="service-modal-content">
+          <span class="service-modal-label" id="serviceModalLabel">
+            Our Service
+          </span>
+
+          <h2 class="service-modal-title" id="serviceModalTitle">
+            Residential Cleaning
+          </h2>
+
+          <p class="service-modal-description" id="serviceModalDescription">
+            Professional cleaning services designed to keep your home fresh,
+            comfortable and beautifully clean.
+          </p>
+
+          <div class="service-modal-included">
+            <h4>What's Included</h4>
+
+            <div class="service-modal-list" id="serviceModalList"></div>
+          </div>
+
+          <div class="service-modal-bottom">
+            <p class="service-modal-note" id="serviceModalNote">
+              Every cleaning is tailored to your needs.
+            </p>
+
+            <a href="#contact" class="btn btn-primary" id="serviceModalQuote">
+              Get a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>

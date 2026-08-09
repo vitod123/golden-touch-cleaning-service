@@ -3168,3 +3168,378 @@ ul {
             1fr 1fr !important;
     }
 }
+
+
+/* ----------------------------------------------------- */
+
+/* =========================================================
+   SERVICE INFO MODAL
+   Learn More popup
+========================================================= */
+
+.service-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 47, 50, 0.72);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.service-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ---------- MODAL CARD ---------- */
+
+.service-modal-card {
+    position: relative;
+
+    width: min(100%, 560px);
+
+    max-height: calc(100vh - 40px);
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.28);
+
+    transform: translateY(25px) scale(0.97);
+
+    transition:
+        transform 0.3s ease;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        var(--gold)
+        #eef5f5;
+}
+
+.service-modal.active .service-modal-card {
+    transform: translateY(0) scale(1);
+}
+
+
+/* ---------- TOP GOLD LINE ---------- */
+
+.service-modal-card::before {
+    content: "";
+
+    display: block;
+
+    width: 100%;
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--teal),
+            var(--gold),
+            var(--teal)
+        );
+}
+
+
+/* ---------- CLOSE BUTTON ---------- */
+
+.service-modal-close {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: var(--teal-light);
+
+    color: var(--teal-dark);
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.service-modal-close:hover {
+    background: var(--teal);
+
+    color: white;
+
+    transform: rotate(90deg);
+}
+
+
+/* ---------- CONTENT ---------- */
+
+.service-modal-content {
+    padding: 38px 40px 35px;
+}
+
+.service-modal-label {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.service-modal-title {
+    margin: 0 50px 15px 0;
+
+    color: var(--teal-dark);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+
+    line-height: 1.15;
+
+    text-transform: uppercase;
+}
+
+.service-modal-description {
+    margin: 0 0 22px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ---------- INCLUDED ---------- */
+
+.service-modal-included {
+    margin: 0 0 25px;
+
+    padding: 20px;
+
+    background: var(--off-white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+}
+
+.service-modal-included h4 {
+    margin: 0 0 13px;
+
+    color: var(--teal-dark);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 17px;
+}
+
+.service-modal-list {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px 20px;
+}
+
+.service-modal-list div {
+    position: relative;
+
+    padding-left: 18px;
+
+    color: #687778;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+.service-modal-list div::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    color: var(--gold);
+
+    font-weight: 900;
+}
+
+
+/* ---------- BOTTOM ---------- */
+
+.service-modal-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+}
+
+.service-modal-note {
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+.service-modal-bottom .btn {
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .service-modal {
+        padding: 15px;
+    }
+
+    .service-modal-card {
+        width: 100%;
+
+        max-height: calc(100vh - 30px);
+
+        border-radius: 12px;
+    }
+
+    .service-modal-content {
+        padding: 32px 22px 25px;
+    }
+
+    .service-modal-close {
+        top: 14px;
+        right: 14px;
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 22px;
+    }
+
+    .service-modal-title {
+        font-size: 27px;
+
+        margin-right: 45px;
+    }
+
+    .service-modal-description {
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+    .service-modal-included {
+        padding: 16px;
+    }
+
+    .service-modal-list {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .service-modal-list div {
+        font-size: 10px;
+    }
+
+    .service-modal-bottom {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .service-modal-bottom .btn {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .service-modal {
+        padding: 10px;
+    }
+
+    .service-modal-content {
+        padding: 28px 18px 20px;
+    }
+
+    .service-modal-title {
+        font-size: 24px;
+    }
+
+    .service-modal-description {
+        font-size: 11px;
+    }
+
+    .service-modal-included {
+        padding: 14px;
+    }
+
+    .service-modal-list div {
+        font-size: 9px;
+    }
+
+}
