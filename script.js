@@ -143,101 +143,58 @@ document.addEventListener("keydown", (event) => {
 
 
 /* ================= CONTACT FORM ================= */
-
-const contactForm =
-    document.getElementById("contactForm");
+const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
+    contactForm.addEventListener("submit", async (event) => {
 
-    contactForm.addEventListener(
-        "submit",
-        async (event) => {
+        event.preventDefault();
 
-            event.preventDefault();
+        const submitButton =
+            contactForm.querySelector('button[type="submit"]');
 
-            const submitButton =
-                contactForm.querySelector(
-                    'button[type="submit"]'
-                );
+        if (!submitButton) return;
 
-            if (!submitButton) return;
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
 
+        try {
 
-            submitButton.disabled = true;
-
-            submitButton.textContent =
-                "Sending...";
-
-
-            try {
-
-                const response = await fetch(
-                    "https://formsubmit.co/ajax/nataliyaboyko93@gmail.com",
-                    {
-                        method: "POST",
-
-                        body:
-                            new FormData(contactForm),
-
-                        headers: {
-                            Accept:
-                                "application/json"
-                        }
+            const response = await fetch(
+                "https://formsubmit.co/ajax/48c91e4bfa76c5b0ab17fca4d2a5b740",
+                {
+                    method: "POST",
+                    body: new FormData(contactForm),
+                    headers: {
+                        Accept: "application/json"
                     }
-                );
-
-
-                const result =
-                    await response.json();
-
-
-                console.log(
-                    "FormSubmit response:",
-                    result
-                );
-
-
-                if (
-                    response.ok &&
-                    result.success
-                ) {
-
-                    location.assign(
-                        "https://vitod123.github.io/golden-touch-cleaning-service/thank-you.html"
-                    );
-
-                    return;
-
                 }
+            );
 
+            const result = await response.json();
 
-                throw new Error(
-                    "FormSubmit rejected the request."
+            if (response.ok && result.success) {
+
+                location.assign(
+                    "https://vitod123.github.io/golden-touch-cleaning-service/thank-you.html"
                 );
 
-
-            } catch (error) {
-
-                console.error(
-                    "Form error:",
-                    error
-                );
-
-
-                submitButton.disabled =
-                    false;
-
-                submitButton.textContent =
-                    "Send Request";
-
-
-                alert(
-                    "Something went wrong. Please try again."
-                );
-
+                return;
             }
 
-        }
-    );
+            throw new Error("FormSubmit rejected the request.");
 
+        } catch (error) {
+
+            console.error("Form error:", error);
+
+            submitButton.disabled = false;
+            submitButton.textContent = "Send Request";
+
+            alert(
+                "Something went wrong. Please try again."
+            );
+        }
+
+    });
 }
