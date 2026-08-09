@@ -1803,3 +1803,542 @@ ul {
 .thank-you-card .btn {
     margin-top: 25px;
 }
+
+
+
+/* ------------ */
+
+
+
+
+/* =========================================================
+   MOBILE DESIGN OVERRIDE
+   Keep desktop-style composition on mobile
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    /* ================= GENERAL ================= */
+
+    .container {
+        width: min(calc(100% - 28px), var(--container));
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    .header-inner {
+        height: 68px;
+        gap: 12px;
+    }
+
+    .logo strong {
+        font-size: 12px;
+    }
+
+    .logo small {
+        font-size: 7px;
+    }
+
+    .logo-icon {
+        font-size: 26px;
+    }
+
+    .header-button {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .nav {
+        position: absolute;
+
+        top: 68px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 15px 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        background: white;
+
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+        transform: translateY(-10px);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: all var(--transition);
+    }
+
+    .nav.active {
+        transform: translateY(0);
+
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav a {
+        padding: 12px 5px;
+
+        border-bottom: 1px solid var(--border);
+
+        font-size: 12px;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+        min-height: 650px;
+
+        padding-top: 68px;
+
+        align-items: center;
+    }
+
+    .hero-background {
+        background-position: center right;
+    }
+
+    .hero-background::after {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(234,246,246,0.96) 0%,
+                rgba(234,246,246,0.88) 45%,
+                rgba(234,246,246,0.30) 100%
+            );
+    }
+
+    .hero-text {
+        max-width: 540px;
+
+        padding: 45px 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 10vw, 58px);
+
+        line-height: 0.98;
+    }
+
+    .hero-text > p {
+        max-width: 480px;
+
+        font-size: 13px;
+
+        margin: 20px 0;
+    }
+
+    .hero-features {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 18px;
+
+        margin-bottom: 25px;
+    }
+
+    .hero-features > div {
+        font-size: 8px;
+    }
+
+    .feature-icon {
+        width: 30px;
+        height: 30px;
+
+        flex-shrink: 0;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+    }
+
+    .hero-buttons .btn {
+        width: auto;
+    }
+
+
+    /* ================= SERVICES ================= */
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 14px;
+    }
+
+    .service-image {
+        height: 170px;
+    }
+
+    .service-content {
+        padding: 34px 14px 20px;
+    }
+
+    .service-content h3 {
+        font-size: 16px;
+    }
+
+    .service-content p {
+        font-size: 10px;
+
+        min-height: auto;
+    }
+
+    .service-content li {
+        font-size: 8px;
+    }
+
+
+    /* ================= WHY ================= */
+
+    .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 25px 15px;
+    }
+
+    .why-title {
+        grid-column: 1 / -1;
+
+        text-align: center;
+    }
+
+    .why-title p {
+        max-width: 500px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .why-item h3 {
+        font-size: 14px;
+    }
+
+    .why-item p {
+        font-size: 8px;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .about-image img {
+        height: 430px;
+    }
+
+    .about-badge {
+        right: 15px;
+    }
+
+
+    /* ================= GALLERY ================= */
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .gallery img {
+        height: 170px;
+    }
+
+
+    /* ================= REVIEWS ================= */
+
+    .reviews-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 14px;
+    }
+
+    .review-card {
+        padding: 22px 15px;
+    }
+
+    .review-card p {
+        font-size: 10px;
+    }
+
+    .review-card strong {
+        font-size: 10px;
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .contact-form-wrapper {
+        padding: 25px 18px;
+    }
+
+    /*
+       Form stays two-column where possible,
+       like desktop.
+    */
+
+    .form-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 35px 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+
+    /* ================= HEADER ================= */
+
+    .logo strong {
+        font-size: 11px;
+    }
+
+    .logo small {
+        font-size: 6px;
+    }
+
+    .logo-icon {
+        font-size: 23px;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+        min-height: 690px;
+    }
+
+    .hero-background {
+        background-position: 60% center;
+    }
+
+    .hero-background::after {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(234,246,246,0.97) 0%,
+                rgba(234,246,246,0.90) 50%,
+                rgba(234,246,246,0.35) 100%
+            );
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-text > p {
+        font-size: 12px;
+    }
+
+    .hero-features {
+        gap: 10px;
+    }
+
+    .hero-features > div {
+        font-size: 7px;
+    }
+
+    .feature-icon {
+        width: 27px;
+        height: 27px;
+
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+
+    /* ================= SERVICES ================= */
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .service-image {
+        height: 140px;
+    }
+
+    .service-content {
+        padding: 30px 10px 16px;
+    }
+
+    .service-content h3 {
+        font-size: 13px;
+    }
+
+    .service-content p {
+        font-size: 8px;
+    }
+
+    .service-content li {
+        font-size: 7px;
+
+        padding-left: 10px;
+    }
+
+    .small-button {
+        min-height: 32px;
+
+        padding: 7px 10px;
+
+        font-size: 7px;
+    }
+
+
+    /* ================= WHY ================= */
+
+    .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 22px 10px;
+    }
+
+    .why-title h2 {
+        font-size: 27px;
+    }
+
+    .why-item h3 {
+        font-size: 12px;
+    }
+
+    .why-item p {
+        font-size: 7px;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about-image img {
+        height: 360px;
+    }
+
+    .about-badge {
+        right: 10px;
+        bottom: 20px;
+
+        padding: 13px 15px;
+    }
+
+
+    /* ================= GALLERY ================= */
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery img {
+        height: 150px;
+    }
+
+
+    /* ================= REVIEWS ================= */
+
+    .reviews-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .review-card {
+        padding: 20px 10px;
+    }
+
+    .stars {
+        font-size: 11px;
+
+        letter-spacing: 1px;
+    }
+
+    .review-card p {
+        font-size: 8px;
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 30px 15px;
+    }
+
+    .footer-column a,
+    .footer-column span {
+        font-size: 8px;
+    }
+
+    .footer-bottom div {
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+}
