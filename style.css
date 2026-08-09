@@ -1,13 +1,12 @@
 /* =========================================================
    GOLDEN TOUCH CLEANING
-   MAIN STYLESHEET — VARIANT B
-   DESKTOP DESIGN PRESERVED ON ALL DEVICES
-========================================================= */
+   VARIANT B — DESKTOP LAYOUT ON MOBILE
+   ========================================================= */
 
 
 /* =========================================================
    VARIABLES
-========================================================= */
+   ========================================================= */
 
 :root {
     --teal: #006b6b;
@@ -37,7 +36,7 @@
 
 /* =========================================================
    RESET
-========================================================= */
+   ========================================================= */
 
 * {
     margin: 0;
@@ -86,14 +85,10 @@ ul {
 
 /* =========================================================
    GENERAL
-========================================================= */
+   ========================================================= */
 
 .container {
-    width: min(
-        calc(100% - 40px),
-        var(--container)
-    );
-
+    width: min(calc(100% - 40px), var(--container));
     margin: 0 auto;
 }
 
@@ -109,14 +104,10 @@ ul {
 
 .section-label {
     display: inline-block;
-
     color: var(--gold);
-
     font-size: 12px;
     font-weight: 800;
-
     letter-spacing: 2px;
-
     margin-bottom: 8px;
 }
 
@@ -128,17 +119,9 @@ ul {
 .about-content h2,
 .contact-info h2 {
     font-family: "Playfair Display", serif;
-
     color: var(--teal-dark);
-
-    font-size: clamp(
-        30px,
-        4vw,
-        44px
-    );
-
+    font-size: clamp(30px, 4vw, 44px);
     line-height: 1.15;
-
     text-transform: uppercase;
 }
 
@@ -150,11 +133,10 @@ ul {
 
 /* =========================================================
    BUTTONS
-========================================================= */
+   ========================================================= */
 
 .btn {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
 
@@ -219,7 +201,7 @@ ul {
 
 /* =========================================================
    HEADER
-========================================================= */
+   ========================================================= */
 
 .header {
     position: fixed;
@@ -268,7 +250,6 @@ ul {
 
 .logo-icon {
     color: var(--gold);
-
     font-size: 30px;
 }
 
@@ -353,7 +334,7 @@ ul {
 
 /* =========================================================
    HERO
-========================================================= */
+   ========================================================= */
 
 .hero {
     min-height: 690px;
@@ -410,13 +391,11 @@ ul {
 
 .hero-content {
     position: relative;
-
     z-index: 2;
 }
 
 .hero-text {
     max-width: 570px;
-
     padding: 60px 0;
 }
 
@@ -436,11 +415,7 @@ ul {
 
     color: var(--teal-dark);
 
-    font-size: clamp(
-        42px,
-        6vw,
-        70px
-    );
+    font-size: clamp(42px, 6vw, 70px);
 
     line-height: 0.98;
 
@@ -449,7 +424,6 @@ ul {
 
 .hero h1 span {
     display: block;
-
     color: var(--gold);
 }
 
@@ -513,7 +487,7 @@ ul {
 
 /* =========================================================
    SERVICES
-========================================================= */
+   ========================================================= */
 
 .services-section {
     background: var(--off-white);
@@ -686,7 +660,7 @@ ul {
 
 /* =========================================================
    WHY
-========================================================= */
+   ========================================================= */
 
 .why-section {
     padding: 60px 0;
@@ -775,7 +749,7 @@ ul {
 
 /* =========================================================
    ABOUT
-========================================================= */
+   ========================================================= */
 
 .about-section {
     background: var(--white);
@@ -898,7 +872,7 @@ ul {
 
 /* =========================================================
    GALLERY
-========================================================= */
+   ========================================================= */
 
 .gallery-section {
     background: var(--off-white);
@@ -942,7 +916,7 @@ ul {
 
 /* =========================================================
    REVIEWS
-========================================================= */
+   ========================================================= */
 
 .reviews-section {
     background: white;
@@ -1008,7 +982,7 @@ ul {
 
 /* =========================================================
    CONTACT
-========================================================= */
+   ========================================================= */
 
 .contact-section {
     padding: 90px 0;
@@ -1108,7 +1082,7 @@ ul {
 
 /* =========================================================
    FORM
-========================================================= */
+   ========================================================= */
 
 .contact-form-wrapper {
     background: white;
@@ -1224,8 +1198,74 @@ ul {
 
 
 /* =========================================================
+   QUOTE FORM
+   ========================================================= */
+
+.form-section-title {
+    color: var(--teal-dark);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    margin: 25px 0 12px;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.form-section-title:first-of-type {
+    margin-top: 0;
+}
+
+.form-note {
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    text-align: center;
+}
+
+.form-group select {
+    appearance: none;
+
+    background-image:
+        linear-gradient(
+            45deg,
+            transparent 50%,
+            var(--teal) 50%
+        ),
+        linear-gradient(
+            135deg,
+            var(--teal) 50%,
+            transparent 50%
+        );
+
+    background-position:
+        calc(100% - 17px) 50%,
+        calc(100% - 12px) 50%;
+
+    background-size:
+        5px 5px,
+        5px 5px;
+
+    background-repeat: no-repeat;
+
+    padding-right: 35px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
    FOOTER
-========================================================= */
+   ========================================================= */
 
 .footer {
     padding: 60px 0 0;
@@ -1347,7 +1387,7 @@ ul {
 
 /* =========================================================
    BACK TO TOP
-========================================================= */
+   ========================================================= */
 
 .back-to-top {
     position: fixed;
@@ -1387,74 +1427,8 @@ ul {
 
 
 /* =========================================================
-   QUOTE FORM
-========================================================= */
-
-.form-section-title {
-    color: var(--teal-dark);
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 17px;
-    font-weight: 700;
-
-    line-height: 1.3;
-
-    margin: 25px 0 12px;
-
-    padding-bottom: 7px;
-
-    border-bottom: 1px solid var(--border);
-}
-
-.form-section-title:first-of-type {
-    margin-top: 0;
-}
-
-.form-note {
-    margin-top: 12px;
-
-    color: var(--muted);
-
-    font-size: 10px;
-
-    text-align: center;
-}
-
-.form-group select {
-    appearance: none;
-
-    background-image:
-        linear-gradient(
-            45deg,
-            transparent 50%,
-            var(--teal) 50%
-        ),
-        linear-gradient(
-            135deg,
-            var(--teal) 50%,
-            transparent 50%
-        );
-
-    background-position:
-        calc(100% - 17px) 50%,
-        calc(100% - 12px) 50%;
-
-    background-size:
-        5px 5px,
-        5px 5px;
-
-    background-repeat: no-repeat;
-
-    padding-right: 35px;
-
-    cursor: pointer;
-}
-
-
-/* =========================================================
-   THANK YOU
-========================================================= */
+   THANK YOU PAGE
+   ========================================================= */
 
 .thank-you {
     min-height: 100vh;
@@ -1531,15 +1505,12 @@ ul {
 
 /* =========================================================
    ABOUT PAGE
-========================================================= */
-
-
-/* ---------- ABOUT HERO ---------- */
+   ========================================================= */
 
 .about-page-hero {
     position: relative;
 
-    min-height: 570px;
+    min-height: 560px;
 
     margin-top: 76px;
 
@@ -1556,21 +1527,18 @@ ul {
 
     inset: 0;
 
+    background-size: cover;
+    background-position: center;
+
     background-image:
         linear-gradient(
             90deg,
-            rgba(238, 249, 249, 0.98) 0%,
-            rgba(238, 249, 249, 0.92) 35%,
-            rgba(238, 249, 249, 0.38) 62%,
-            rgba(238, 249, 249, 0.05) 100%
+            rgba(234, 246, 246, 0.98) 0%,
+            rgba(234, 246, 246, 0.90) 40%,
+            rgba(234, 246, 246, 0.35) 70%,
+            rgba(234, 246, 246, 0.05) 100%
         ),
         url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1800&q=90");
-
-    background-size: cover;
-
-    background-position: center right;
-
-    z-index: 0;
 }
 
 .about-page-hero-content {
@@ -1578,21 +1546,17 @@ ul {
 
     z-index: 2;
 
-    max-width: 570px;
+    max-width: 580px;
 
     padding: 70px 0;
 }
 
 .about-page-hero h1 {
-    color: var(--teal-dark);
-
     font-family: "Playfair Display", serif;
 
-    font-size: clamp(
-        42px,
-        6vw,
-        68px
-    );
+    color: var(--teal-dark);
+
+    font-size: clamp(44px, 6vw, 68px);
 
     line-height: 0.98;
 
@@ -1608,7 +1572,7 @@ ul {
 }
 
 .about-page-hero-content p {
-    max-width: 520px;
+    max-width: 500px;
 
     color: #526667;
 
@@ -1621,18 +1585,20 @@ ul {
     width: 70px;
     height: 3px;
 
-    margin: 20px 0;
-
     background: var(--gold);
+
+    margin: 18px 0;
 }
 
 
-/* ---------- VALUES ---------- */
+/* =========================================================
+   ABOUT VALUES
+   ========================================================= */
 
 .about-values {
-    padding: 80px 0;
+    padding: 75px 0;
 
-    background: white;
+    background: var(--off-white);
 }
 
 .values-grid {
@@ -1645,7 +1611,7 @@ ul {
 }
 
 .value-card {
-    padding: 0 30px;
+    padding: 10px 30px;
 
     text-align: center;
 
@@ -1660,16 +1626,16 @@ ul {
     width: 62px;
     height: 62px;
 
-    margin: 0 auto 16px;
+    margin: 0 auto 15px;
 
     display: grid;
     place-items: center;
 
     border-radius: 50%;
 
-    background: var(--teal-light);
+    background: var(--teal);
 
-    color: var(--teal);
+    color: var(--gold-light);
 
     font-size: 24px;
 }
@@ -1681,11 +1647,11 @@ ul {
 
     font-size: 16px;
 
-    line-height: 1.25;
-
-    margin-bottom: 10px;
-
     text-transform: uppercase;
+
+    line-height: 1.2;
+
+    margin-bottom: 8px;
 }
 
 .value-card p {
@@ -1697,12 +1663,12 @@ ul {
 }
 
 
-/* ---------- STORY ---------- */
+/* =========================================================
+   ABOUT STORY
+   ========================================================= */
 
 .about-story {
     padding: 90px 0;
-
-    background: var(--off-white);
 }
 
 .story-card {
@@ -1711,7 +1677,7 @@ ul {
     grid-template-columns:
         1fr 1fr;
 
-    background: white;
+    background: var(--off-white);
 
     border-radius: 10px;
 
@@ -1722,6 +1688,8 @@ ul {
 
 .story-image {
     min-height: 500px;
+
+    position: relative;
 }
 
 .story-image img {
@@ -1736,6 +1704,7 @@ ul {
 
     display: flex;
     flex-direction: column;
+
     justify-content: center;
 }
 
@@ -1745,13 +1714,13 @@ ul {
 
     font-family: "Playfair Display", serif;
 
-    font-size: 40px;
+    font-size: 42px;
 
     line-height: 1.1;
 
     text-transform: uppercase;
 
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 .story-content h2 span,
@@ -1770,12 +1739,14 @@ ul {
 }
 
 
-/* ---------- TEAM ---------- */
+/* =========================================================
+   ABOUT TEAM
+   ========================================================= */
 
 .about-team {
-    padding: 90px 0;
+    padding: 70px 0 90px;
 
-    background: white;
+    background: var(--white);
 }
 
 .team-grid {
@@ -1825,9 +1796,9 @@ ul {
 
     color: var(--text);
 
-    font-size: 11px;
+    font-size: 12px;
 
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .team-list li::before {
@@ -1847,7 +1818,7 @@ ul {
 
     font-family: "Playfair Display", serif;
 
-    font-size: 24px;
+    font-size: 25px;
 
     line-height: 1.3;
 
@@ -1855,7 +1826,9 @@ ul {
 }
 
 
-/* ---------- CTA ---------- */
+/* =========================================================
+   ABOUT CTA
+   ========================================================= */
 
 .about-cta {
     padding: 65px 0;
@@ -1874,9 +1847,9 @@ ul {
     display: grid;
 
     grid-template-columns:
-        1.3fr 0.7fr;
+        1.4fr 0.6fr;
 
-    gap: 50px;
+    gap: 60px;
 
     align-items: center;
 }
@@ -1891,155 +1864,81 @@ ul {
     line-height: 1.1;
 
     text-transform: uppercase;
+
+    margin-bottom: 15px;
 }
 
 .about-cta h2 span {
     color: var(--gold-light);
 }
 
+.about-cta p {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 12px;
+
+    max-width: 650px;
+}
+
 .about-cta-contact {
-    padding-left: 40px;
+    padding-left: 35px;
 
     border-left:
         1px solid rgba(255, 255, 255, 0.2);
 }
 
-.about-cta-contact p {
-    color: rgba(255, 255, 255, 0.75);
+.about-cta-contact a {
+    display: block;
 
-    font-size: 12px;
+    color: white;
 
-    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 8px;
 }
 
 
 /* =========================================================
-   OPTIONAL NEW CLASS NAMES
-   Support for the newer About Page HTML
-========================================================= */
-
-.wrap {
-    width: min(
-        calc(100% - 40px),
-        var(--container)
-    );
-
-    margin: 0 auto;
-}
-
-.topbar {
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-
-    z-index: 1000;
-
-    background: rgba(255, 255, 255, 0.96);
-
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.topbar .nav {
-    height: 76px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-
-    gap: 10px;
-
-    color: var(--teal-dark);
-}
-
-.brand img {
-    width: 48px;
-    height: 48px;
-
-    object-fit: contain;
-}
-
-.brand b {
-    display: block;
-
-    font-size: 14px;
-    font-weight: 800;
-
-    letter-spacing: 1px;
-}
-
-.brand small {
-    display: block;
-
-    color: var(--gold);
-
-    font-size: 8px;
-
-    letter-spacing: 2px;
-
-    margin-top: 3px;
-}
-
-.hamb {
-    display: none;
-}
-
-.top-phone {
-    display: inline-flex;
-
-    align-items: center;
-
-    padding: 12px 18px;
-
-    background: var(--teal);
-
-    color: white;
-
-    border-radius: 4px;
-
-    font-size: 11px;
-    font-weight: 800;
-
-    text-transform: uppercase;
-}
-
-
-/* ---------- NEW HERO ---------- */
+   NEW ABOUT PAGE / ALTERNATIVE CLASS NAMES
+   ========================================================= */
 
 .about-hero {
+    position: relative;
+
     min-height: 610px;
 
-    margin-top: 76px;
+    display: flex;
+    align-items: center;
 
-    background: var(--teal-light);
+    overflow: hidden;
+
+    margin-top: 76px;
 }
 
 .about-hero .hero-inner {
-    min-height: 610px;
+    width: min(calc(100% - 40px), var(--container));
+
+    margin: 0 auto;
 
     display: grid;
 
     grid-template-columns:
-        1fr 1fr;
+        1.02fr 0.98fr;
+
+    min-height: 610px;
 
     align-items: center;
 }
 
 .about-hero .hero-copy {
-    padding: 60px 40px 60px 0;
+    padding-right: 50px;
 }
 
-.about-hero h1 {
-    color: var(--teal-dark);
-
+.about-hero .hero-copy h1 {
     font-family: "Playfair Display", serif;
+
+    color: var(--teal-dark);
 
     font-size: 62px;
 
@@ -2048,28 +1947,24 @@ ul {
     text-transform: uppercase;
 }
 
-.about-hero h1 span {
-    display: block;
-
+.about-hero .hero-copy h1 span {
     color: var(--gold);
 }
 
 .about-hero .lead {
-    max-width: 500px;
-
     color: var(--muted);
 
     font-size: 14px;
 
     line-height: 1.7;
 
-    margin-top: 25px;
+    max-width: 520px;
+
+    margin-top: 20px;
 }
 
 .about-hero .hero-photo {
     height: 610px;
-
-    overflow: hidden;
 }
 
 .about-hero .hero-photo img {
@@ -2080,26 +1975,21 @@ ul {
 }
 
 
-/* ---------- NEW ABOUT CONTENT ---------- */
+/* =========================================================
+   ALTERNATIVE ABOUT CONTENT
+   ========================================================= */
 
-.about-grid {
-    display: grid;
-
-    grid-template-columns:
-        1fr 1.15fr 0.72fr;
-
-    gap: 35px;
-
-    align-items: center;
+.about-photo {
+    position: relative;
 }
 
 .about-photo img {
     width: 100%;
-    height: 450px;
+    height: 500px;
 
     object-fit: cover;
 
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .about-copy h2 {
@@ -2107,18 +1997,16 @@ ul {
 
     font-family: "Playfair Display", serif;
 
-    font-size: 38px;
+    font-size: 42px;
 
     line-height: 1.1;
 
     text-transform: uppercase;
 
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .about-copy h2 span {
-    display: block;
-
     color: var(--gold);
 }
 
@@ -2137,97 +2025,19 @@ ul {
 
     align-items: center;
     justify-content: center;
+
+    color: var(--gold);
+
+    font-size: 70px;
 }
 
 
-/* ---------- NEW SERVICES ---------- */
-
-.service-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 18px;
-}
-
-.service-grid .service-card {
-    overflow: hidden;
-}
-
-.service-card > img {
-    width: 100%;
-    height: 185px;
-
-    object-fit: cover;
-}
-
-.circle-icon {
-    width: 52px;
-    height: 52px;
-
-    margin: -18px auto 0;
-
-    position: relative;
-    z-index: 2;
-
-    display: grid;
-    place-items: center;
-
-    border-radius: 50%;
-
-    background: var(--teal);
-
-    border: 4px solid white;
-
-    color: white;
-
-    font-size: 20px;
-}
-
-.service-pad {
-    padding: 18px 20px 22px;
-
-    text-align: center;
-}
-
-.service-pad h3 {
-    color: var(--teal-dark);
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 19px;
-
-    text-transform: uppercase;
-}
-
-.service-pad p {
-    color: var(--muted);
-
-    font-size: 11px;
-
-    line-height: 1.6;
-
-    margin: 10px 0;
-}
-
-.service-pad ul {
-    text-align: left;
-
-    color: var(--muted);
-
-    font-size: 9px;
-
-    line-height: 1.6;
-
-    margin-bottom: 18px;
-}
-
-
-/* ---------- NEW DIFFERENCE ---------- */
+/* =========================================================
+   DIFFERENCE
+   ========================================================= */
 
 .difference {
-    padding: 60px 0;
+    padding: 65px 0;
 
     background:
         linear-gradient(
@@ -2251,25 +2061,29 @@ ul {
 }
 
 .difference-title h2 {
+    color: white;
+
     font-family: "Playfair Display", serif;
 
-    font-size: 30px;
+    font-size: 32px;
 
     line-height: 1.1;
 
     text-transform: uppercase;
+
+    margin-bottom: 15px;
 }
 
 .difference-title p {
     color: rgba(255, 255, 255, 0.75);
 
     font-size: 11px;
-
-    margin-top: 15px;
 }
 
 .diff-item {
     text-align: center;
+
+    padding: 10px 15px;
 }
 
 .diff-item i {
@@ -2297,7 +2111,9 @@ ul {
 
     font-family: "Playfair Display", serif;
 
-    font-size: 16px;
+    font-size: 15px;
+
+    line-height: 1.2;
 
     text-transform: uppercase;
 
@@ -2305,13 +2121,129 @@ ul {
 }
 
 .diff-item p {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.68);
 
     font-size: 9px;
+
+    line-height: 1.5;
 }
 
 
-/* ---------- NEW QUOTE ---------- */
+/* =========================================================
+   ALTERNATIVE SERVICES
+   ========================================================= */
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.service-grid .service-card {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.service-card > img {
+    width: 100%;
+    height: 185px;
+
+    object-fit: cover;
+}
+
+.circle-icon {
+    width: 52px;
+    height: 52px;
+
+    margin: -26px auto 0;
+
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--teal);
+
+    border: 4px solid white;
+
+    color: white;
+
+    font-size: 20px;
+}
+
+.service-pad {
+    padding: 20px;
+
+    text-align: center;
+}
+
+.service-pad h3 {
+    color: var(--teal-dark);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+.service-pad p {
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    margin-bottom: 12px;
+}
+
+.service-pad ul {
+    text-align: left;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+.service-pad li {
+    position: relative;
+
+    padding-left: 13px;
+}
+
+.service-pad li::before {
+    content: "●";
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--gold);
+
+    font-size: 6px;
+}
+
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
 
 .quote {
     padding: 90px 0;
@@ -2340,7 +2272,7 @@ ul {
 
     font-family: "Playfair Display", serif;
 
-    font-size: 44px;
+    font-size: 42px;
 
     line-height: 1.1;
 
@@ -2358,7 +2290,7 @@ ul {
 
     line-height: 1.7;
 
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 .quote-form {
@@ -2390,7 +2322,7 @@ ul {
 
     border-radius: 4px;
 
-    padding: 12px 13px;
+    padding: 12px;
 
     background: #fbfdfd;
 
@@ -2408,45 +2340,9 @@ ul {
 }
 
 
-/* ---------- NEW FOOTER ---------- */
-
-footer {
-    background: #002f32;
-
-    color: white;
-
-    padding: 60px 0 0;
-}
-
-.footer-brand img {
-    width: 75px;
-    height: 75px;
-
-    object-fit: contain;
-}
-
-.footer-grid h4 {
-    color: var(--gold-light);
-
-    font-size: 11px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 8px;
-}
-
-.copyright {
-    color: rgba(255, 255, 255, 0.45);
-
-    font-size: 9px;
-}
-
-
 /* =========================================================
    MODAL
-========================================================= */
+   ========================================================= */
 
 .modal {
     position: fixed;
@@ -2455,18 +2351,23 @@ footer {
 
     z-index: 3000;
 
-    display: flex;
+    display: none;
 
     align-items: center;
     justify-content: center;
 
     padding: 30px;
 
-    background: rgba(0, 35, 38, 0.72);
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.modal.show,
+.modal.active {
+    display: flex;
 }
 
 .modal-card {
-    width: min(560px, 100%);
+    width: min(100%, 560px);
 
     max-height: 90vh;
 
@@ -2479,7 +2380,7 @@ footer {
     border-radius: 10px;
 
     box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.3);
+        0 25px 60px rgba(0, 0, 0, 0.3);
 }
 
 .modal-card h3 {
@@ -2502,128 +2403,155 @@ footer {
 
 
 /* =========================================================
-   CTA ROW
-========================================================= */
-
-.cta-row {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-}
-
-
-/* =========================================================
-   WATER DECORATIONS
-========================================================= */
+   WATER DECORATION
+   ========================================================= */
 
 .water-a,
 .water-b,
 .water-c,
 .water-d {
     pointer-events: none;
+
+    opacity: 0.65;
 }
 
 
 /* =========================================================
-   =========================================================
    VARIANT B
-   DESKTOP DESIGN ON MOBILE
    =========================================================
-========================================================= */
-
-/*
-   ОСНОВНА ІДЕЯ:
-
-   На екранах менше 1180px ми НЕ робимо:
-   - 1 колонку;
-   - mobile cards;
-   - mobile hero;
-   - mobile footer;
-   - mobile reviews;
-   - mobile gallery;
-   - mobile navigation.
-
-   Замість цього сторінка залишається desktop-width.
-
-   Тобто телефон показує desktop canvas,
-   який можна гортати горизонтально.
-*/
+   
+   IMPORTANT:
+   On mobile we intentionally DO NOT create a mobile layout.
+   The entire website remains desktop-width.
+   
+   The viewport meta tag:
+   
+   <meta name="viewport" content="width=1180">
+   
+   makes the browser use a 1180px layout viewport.
+   Therefore the desktop CSS remains active.
+   ========================================================= */
 
 
-@media (max-width: 1180px) {
+/* =========================================================
+   DESKTOP BREAKPOINT
+   ========================================================= */
 
-    html,
+@media (max-width: 1050px) {
+
+    /*
+       Variant B intentionally keeps the desktop composition.
+       Only very small spacing reductions are allowed.
+    */
+
+    .header-inner {
+        gap: 20px;
+    }
+
+    .nav {
+        gap: 18px;
+    }
+
+    .services-grid,
+    .service-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+    .why-grid {
+        grid-template-columns:
+            1.4fr repeat(4, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns:
+            repeat(5, 1fr);
+    }
+
+    .reviews-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            1.5fr 1fr 1fr 1.2fr;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — KEEP DESKTOP LAYOUT
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    /*
+       DO NOT convert grids to one column.
+       DO NOT hide desktop navigation.
+       DO NOT resize the whole composition.
+       This is Variant B.
+    */
+
     body {
         min-width: 1180px;
     }
 
-    body {
-        overflow-x: auto;
-    }
-
-    .container,
-    .wrap {
+    .container {
         width: 1140px;
         max-width: 1140px;
-    }
-
-
-    /* ================= HEADER ================= */
-
-    .header {
-        min-width: 1180px;
     }
 
     .header-inner {
         height: 76px;
     }
 
+    .header-button {
+        display: inline-flex;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
     .nav {
+        position: static;
+
         display: flex;
+
         flex-direction: row;
 
-        position: static;
+        align-items: center;
 
         width: auto;
 
         padding: 0;
 
-        opacity: 1;
-        visibility: visible;
-
-        transform: none;
+        gap: 27px;
 
         background: transparent;
 
         box-shadow: none;
 
-        gap: 27px;
+        transform: none;
+
+        opacity: 1;
+
+        visibility: visible;
     }
 
     .nav a {
         padding: 0;
 
-        border-bottom: 0;
+        border: 0;
 
-        white-space: nowrap;
-    }
-
-    .menu-button {
-        display: none !important;
-    }
-
-    .header-button {
-        display: inline-flex;
+        font-size: 12px;
     }
 
 
-    /* ================= HERO ================= */
+    /* HERO */
 
     .hero {
-        min-width: 1180px;
-
         min-height: 690px;
 
         padding-top: 76px;
@@ -2649,14 +2577,8 @@ footer {
         font-size: 15px;
     }
 
-    .hero-features {
-        gap: 25px;
-    }
-
     .hero-buttons {
         flex-direction: row;
-
-        flex-wrap: wrap;
     }
 
     .hero-buttons .btn {
@@ -2664,7 +2586,7 @@ footer {
     }
 
 
-    /* ================= SERVICES ================= */
+    /* SERVICES */
 
     .services-grid,
     .service-grid {
@@ -2672,31 +2594,12 @@ footer {
             repeat(4, 1fr);
     }
 
-    .service-image,
-    .service-card > img {
+    .service-image {
         height: 185px;
     }
 
-    .service-content {
-        padding: 35px 20px 22px;
-    }
 
-    .service-content h3,
-    .service-pad h3 {
-        font-size: 19px;
-    }
-
-    .service-content p {
-        font-size: 11px;
-        min-height: 52px;
-    }
-
-    .service-content li {
-        font-size: 9px;
-    }
-
-
-    /* ================= WHY ================= */
+    /* WHY */
 
     .why-grid,
     .difference-grid {
@@ -2707,10 +2610,12 @@ footer {
     .why-title,
     .difference-title {
         grid-column: auto;
+
+        text-align: left;
     }
 
 
-    /* ================= ABOUT ================= */
+    /* ABOUT */
 
     .about-grid {
         grid-template-columns:
@@ -2726,150 +2631,7 @@ footer {
     }
 
 
-    /* ================= ABOUT PAGE ================= */
-
-    .about-page-hero {
-        min-width: 1180px;
-
-        min-height: 570px;
-
-        margin-top: 76px;
-    }
-
-    .about-page-hero-content {
-        padding: 70px 0;
-    }
-
-    .about-page-hero h1 {
-        font-size: 68px !important;
-    }
-
-    .about-page-hero-content p {
-        font-size: 14px;
-    }
-
-    .about-values {
-        min-width: 1180px;
-    }
-
-    .values-grid {
-        grid-template-columns:
-            repeat(4, 1fr);
-    }
-
-    .value-card {
-        padding: 0 30px;
-    }
-
-    .value-card h3 {
-        font-size: 16px;
-    }
-
-    .value-card p {
-        font-size: 10px;
-    }
-
-    .story-card {
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-    .story-image {
-        min-height: 500px;
-    }
-
-    .story-content {
-        padding: 65px 55px;
-    }
-
-    .story-content h2,
-    .team-content h2 {
-        font-size: 40px;
-    }
-
-    .story-content p {
-        font-size: 13px;
-    }
-
-    .team-grid {
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-    .team-image {
-        height: 500px;
-    }
-
-    .about-cta-inner {
-        grid-template-columns:
-            1.3fr 0.7fr;
-    }
-
-
-    /* ================= NEW ABOUT HERO ================= */
-
-    .about-hero {
-        min-width: 1180px;
-
-        min-height: 610px;
-
-        margin-top: 76px;
-    }
-
-    .about-hero .hero-inner {
-        display: grid !important;
-
-        grid-template-columns:
-            1fr 1fr;
-
-        min-height: 610px;
-    }
-
-    .about-hero .hero-copy {
-        width: auto;
-
-        padding: 60px 40px 60px 0;
-    }
-
-    .about-hero h1 {
-        font-size: 62px !important;
-    }
-
-    .about-hero .lead {
-        font-size: 14px;
-    }
-
-    .about-hero .hero-photo {
-        width: auto;
-
-        height: 610px !important;
-
-        min-height: 610px !important;
-
-        margin: 0;
-    }
-
-
-    /* ================= NEW ABOUT CONTENT ================= */
-
-    .about-photo {
-        width: auto;
-    }
-
-    .about-copy {
-        width: auto;
-    }
-
-    .about-logo {
-        display: flex !important;
-    }
-
-    .about-photo img {
-        height: 450px;
-    }
-
-
-    /* ================= GALLERY ================= */
+    /* GALLERY */
 
     .gallery {
         grid-template-columns:
@@ -2881,7 +2643,7 @@ footer {
     }
 
 
-    /* ================= REVIEWS ================= */
+    /* REVIEWS */
 
     .reviews-grid {
         grid-template-columns:
@@ -2892,34 +2654,21 @@ footer {
         padding: 30px;
     }
 
-    .review-card p {
-        font-size: 12px;
-    }
 
+    /* CONTACT */
 
-    /* ================= CONTACT ================= */
-
-    .contact-grid,
-    .quote-grid {
+    .contact-grid {
         grid-template-columns:
             0.9fr 1.1fr;
     }
 
-    .quote-grid {
-        gap: 70px;
-    }
-
-    .quote-form .two {
+    .form-row {
         grid-template-columns:
             1fr 1fr;
     }
 
-    .quote-form {
-        padding: 35px;
-    }
 
-
-    /* ================= FOOTER ================= */
+    /* FOOTER */
 
     .footer-grid {
         grid-template-columns:
@@ -2933,248 +2682,20 @@ footer {
     }
 
 
-    /* ================= SECTION ================= */
-
-    .section {
-        padding: 90px 0;
-    }
-
-
-    /* ================= BUTTONS ================= */
-
-    .cta-row {
-        flex-direction: row;
-
-        width: auto;
-    }
-
-    .cta-row .btn {
-        width: auto;
-    }
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-   STILL DESKTOP
-========================================================= */
-
-@media (max-width: 700px) {
-
-    html,
-    body {
-        min-width: 1180px;
-    }
-
-    body {
-        overflow-x: auto;
-    }
-
-    .container,
-    .wrap {
-        width: 1140px;
-        max-width: 1140px;
-    }
-
-    /* Header stays desktop */
-
-    .header {
-        min-width: 1180px;
-    }
-
-    .header-inner {
-        height: 76px;
-    }
-
-    .menu-button {
-        display: none !important;
-    }
-
-    .nav {
-        display: flex !important;
-
-        position: static;
-
-        flex-direction: row;
-
-        align-items: center;
-
-        width: auto;
-
-        padding: 0;
-
-        gap: 27px;
-
-        background: transparent;
-
-        box-shadow: none;
-
-        opacity: 1;
-
-        visibility: visible;
-
-        transform: none;
-    }
-
-    .nav a {
-        padding: 0;
-
-        border: 0;
-
-        font-size: 12px;
-    }
-
-    .header-button {
-        display: inline-flex;
-    }
-
-
-    /* Hero stays desktop */
-
-    .hero {
-        min-width: 1180px;
-
-        min-height: 690px;
-
-        padding-top: 76px;
-
-        align-items: center;
-    }
-
-    .hero-background::after {
-        background:
-            linear-gradient(
-                90deg,
-                #eaf6f6 0%,
-                rgba(234, 246, 246, 0.95) 35%,
-                rgba(234, 246, 246, 0.5) 60%,
-                rgba(234, 246, 246, 0.05) 100%
-            );
-    }
-
-    .hero-text {
-        max-width: 570px;
-
-        padding: 60px 0;
-    }
-
-    .hero h1 {
-        font-size: 70px !important;
-    }
-
-    .hero-text > p {
-        font-size: 15px;
-    }
-
-    .hero-features {
-        gap: 25px;
-    }
-
-    .hero-features > div {
-        font-size: 9px;
-    }
-
-    .hero-buttons {
-        flex-direction: row;
-    }
-
-    .hero-buttons .btn {
-        width: auto;
-    }
-
-
-    /* Services */
-
-    .services-grid,
-    .service-grid {
-        grid-template-columns:
-            repeat(4, 1fr) !important;
-    }
-
-
-    /* Why */
-
-    .why-grid,
-    .difference-grid {
-        grid-template-columns:
-            1.4fr repeat(4, 1fr) !important;
-    }
-
-    .why-title,
-    .difference-title {
-        grid-column: auto !important;
-
-        text-align: left;
-    }
-
-
-    /* About */
-
-    .about-grid {
-        grid-template-columns:
-            1fr 1fr !important;
-    }
-
-    .about-image img {
-        height: 520px;
-    }
-
-
-    /* Gallery */
-
-    .gallery {
-        grid-template-columns:
-            repeat(5, 1fr) !important;
-    }
-
-    .gallery img {
-        height: 190px;
-    }
-
-
-    /* Reviews */
-
-    .reviews-grid {
-        grid-template-columns:
-            repeat(3, 1fr) !important;
-    }
-
-
-    /* Contact */
-
-    .contact-grid,
-    .quote-grid {
-        grid-template-columns:
-            0.9fr 1.1fr !important;
-    }
-
-
-    /* Footer */
-
-    .footer-grid {
-        grid-template-columns:
-            1.5fr 1fr 1fr 1.2fr !important;
-    }
-
-    .footer-bottom {
-        flex-direction: row;
-    }
-
-
-    /* About page */
+    /* ABOUT PAGE */
 
     .about-page-hero {
-        min-width: 1180px;
+        min-height: 560px !important;
 
-        min-height: 570px;
-
-        height: 570px !important;
+        height: auto !important;
 
         margin-top: 76px;
 
         display: flex !important;
 
         align-items: center;
+
+        padding: 0 !important;
     }
 
     .about-page-hero-image {
@@ -3182,17 +2703,31 @@ footer {
 
         width: auto;
 
-        height: auto;
+        height: auto !important;
 
-        min-height: 0;
+        min-height: 0 !important;
+
+        inset: 0;
 
         background-size: cover;
 
-        background-position: center right;
+        background-position: center;
+
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(234, 246, 246, 0.98) 0%,
+                rgba(234, 246, 246, 0.90) 40%,
+                rgba(234, 246, 246, 0.35) 70%,
+                rgba(234, 246, 246, 0.05) 100%
+            ),
+            url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1800&q=90");
     }
 
     .about-page-hero-content {
         width: auto;
+
+        max-width: 580px;
 
         padding: 70px 0;
     }
@@ -3206,21 +2741,19 @@ footer {
     }
 
 
-    /* About values */
+    /* VALUES */
 
     .about-values {
-        min-width: 1180px;
-
-        padding: 80px 0;
+        padding: 75px 0;
     }
 
     .values-grid {
         grid-template-columns:
-            repeat(4, 1fr) !important;
+            repeat(4, 1fr);
     }
 
     .value-card {
-        padding: 0 30px;
+        padding: 10px 30px;
 
         border-right: 1px solid #e6d3a0;
     }
@@ -3234,17 +2767,15 @@ footer {
     }
 
 
-    /* Story */
+    /* STORY */
 
     .about-story {
-        min-width: 1180px;
-
         padding: 90px 0;
     }
 
     .story-card {
         grid-template-columns:
-            1fr 1fr !important;
+            1fr 1fr;
     }
 
     .story-image {
@@ -3260,7 +2791,7 @@ footer {
     }
 
     .story-content h2 {
-        font-size: 40px;
+        font-size: 42px;
     }
 
     .story-content p {
@@ -3268,17 +2799,15 @@ footer {
     }
 
 
-    /* Team */
+    /* TEAM */
 
     .about-team {
-        min-width: 1180px;
-
-        padding: 90px 0;
+        padding: 70px 0 90px;
     }
 
     .team-grid {
         grid-template-columns:
-            1fr 1fr !important;
+            1fr 1fr;
     }
 
     .team-image {
@@ -3286,25 +2815,27 @@ footer {
     }
 
     .team-content h2 {
-        font-size: 40px;
+        font-size: 42px;
     }
 
     .team-content > p {
         font-size: 13px;
     }
 
+    .team-list li {
+        font-size: 12px;
+    }
+
 
     /* CTA */
 
     .about-cta {
-        min-width: 1180px;
-
         padding: 65px 0;
     }
 
     .about-cta-inner {
         grid-template-columns:
-            1.3fr 0.7fr !important;
+            1.4fr 0.6fr;
     }
 
     .about-cta h2 {
@@ -3312,7 +2843,7 @@ footer {
     }
 
     .about-cta-contact {
-        padding-left: 40px;
+        padding-left: 35px;
 
         padding-top: 0;
 
@@ -3323,56 +2854,258 @@ footer {
     }
 
 
-    /* New About */
+    /* ALTERNATIVE ABOUT */
 
     .about-hero {
-        min-width: 1180px;
-
-        min-height: 610px;
-
-        height: 610px !important;
+        min-height: 610px !important;
 
         margin-top: 76px;
     }
 
     .about-hero .hero-inner {
-        display: grid !important;
-
-        grid-template-columns:
-            1fr 1fr;
+        width: 1140px;
 
         min-height: 610px;
+
+        grid-template-columns:
+            1.02fr 0.98fr;
     }
 
     .about-hero .hero-copy {
-        width: auto;
-
-        padding: 60px 40px 60px 0;
+        padding-right: 50px;
     }
 
-    .about-hero h1 {
-        font-size: 62px !important;
+    .about-hero .hero-copy h1 {
+        font-size: 62px;
     }
 
     .about-hero .hero-photo {
-        width: auto;
-
-        height: 610px !important;
-
-        min-height: 610px !important;
-    }
-
-    .about-photo img {
-        height: 450px;
+        height: 610px;
     }
 
 
-    /* Quote */
+    /* DIFFERENCE */
+
+    .difference {
+        padding: 65px 0;
+    }
+
+    .difference-grid {
+        grid-template-columns:
+            1.25fr repeat(4, 1fr);
+
+        gap: 30px;
+    }
+
+    .diff-item {
+        padding: 10px 15px;
+
+        border: 0;
+    }
+
+
+    /* QUOTE */
 
     .quote {
-        min-width: 1180px;
-
         padding: 90px 0;
+    }
+
+    .quote-grid {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 70px;
+    }
+
+    .quote h2 {
+        font-size: 42px;
+    }
+
+    .quote-form {
+        padding: 35px;
+    }
+
+    .quote-form .two {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    /* MODAL */
+
+    .modal {
+        padding: 30px;
+    }
+
+    .modal-card {
+        width: min(100%, 560px);
+
+        max-height: 90vh;
+
+        padding: 35px;
+    }
+
+    .modal-card h3 {
+        font-size: 30px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    body {
+        min-width: 1180px;
+    }
+
+    .container {
+        width: 1140px;
+        max-width: 1140px;
+    }
+
+    .header-inner {
+        height: 76px;
+    }
+
+    .logo strong {
+        font-size: 14px;
+    }
+
+    .logo small {
+        font-size: 8px;
+    }
+
+    .logo-icon {
+        font-size: 30px;
+    }
+
+    .hero {
+        min-height: 690px;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .section {
+        padding: 90px 0;
+    }
+
+    .gallery {
+        grid-template-columns:
+            repeat(5, 1fr);
+    }
+
+    .gallery img {
+        height: 190px;
+    }
+
+    .reviews-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .about-page-hero {
+        min-height: 560px !important;
+
+        margin-top: 76px;
+    }
+
+    .about-page-hero h1 {
+        font-size: 68px !important;
+    }
+
+    .values-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+    .story-card {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .story-content {
+        padding: 65px 55px;
+    }
+
+    .story-content h2,
+    .team-content h2 {
+        font-size: 42px;
+    }
+
+    .team-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .team-image {
+        height: 500px;
+    }
+
+    .about-cta-inner {
+        grid-template-columns:
+            1.4fr 0.6fr;
+    }
+
+    .about-cta h2 {
+        font-size: 38px;
+    }
+}
+
+
+/* =========================================================
+   FINAL VARIANT B OVERRIDE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    /*
+       Absolutely no mobile stacking.
+       Desktop proportions are preserved.
+    */
+
+    .services-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr)) !important;
+    }
+
+    .service-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr)) !important;
+    }
+
+    .why-grid {
+        grid-template-columns:
+            1.4fr repeat(4, minmax(0, 1fr)) !important;
+    }
+
+    .difference-grid {
+        grid-template-columns:
+            1.25fr repeat(4, minmax(0, 1fr)) !important;
+    }
+
+    .about-grid {
+        grid-template-columns:
+            1fr 1fr !important;
+    }
+
+    .gallery {
+        grid-template-columns:
+            repeat(5, minmax(0, 1fr)) !important;
+    }
+
+    .reviews-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr)) !important;
+    }
+
+    .contact-grid {
+        grid-template-columns:
+            0.9fr 1.1fr !important;
     }
 
     .quote-grid {
@@ -3385,23 +3118,53 @@ footer {
             1fr 1fr !important;
     }
 
-
-    /* Modal */
-
-    .modal {
-        min-width: 1180px;
+    .footer-grid {
+        grid-template-columns:
+            1.5fr 1fr 1fr 1.2fr !important;
     }
 
-    .modal-card {
-        width: 560px;
+    .story-card {
+        grid-template-columns:
+            1fr 1fr !important;
+    }
 
-        max-height: 90vh;
+    .team-grid {
+        grid-template-columns:
+            1fr 1fr !important;
+    }
 
-        padding: 35px;
+    .about-cta-inner {
+        grid-template-columns:
+            1.4fr 0.6fr !important;
+    }
+
+    .values-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr)) !important;
+    }
+
+    .nav {
+        display: flex !important;
+    }
+
+    .menu-button {
+        display: none !important;
+    }
+
+    .header-button {
+        display: inline-flex !important;
+    }
+
+    .hero-buttons {
+        flex-direction: row !important;
+    }
+
+    .hero-buttons .btn {
+        width: auto !important;
+    }
+
+    .form-row {
+        grid-template-columns:
+            1fr 1fr !important;
     }
 }
-
-
-/* =========================================================
-   END — VARIANT B
-========================================================= */
