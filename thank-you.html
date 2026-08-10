@@ -1,31 +1,90 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="width=1180, initial-scale=0.333333" />
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Thank you for contacting Golden Touch Cleaning Service."
+    >
 
     <title>Thank You | Golden Touch Cleaning</title>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <body>
-    <section class="thank-you">
-      <div class="thank-you-card">
-        <div class="thank-you-icon">✓</div>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
 
-        <h1>Thank You!</h1>
+    <link rel="stylesheet" href="style.css">
 
-        <p>Your quote request has been successfully sent.</p>
+</head>
 
-        <p>
-          We will review your information and contact you shortly with your
-          cleaning estimate.
-        </p>
 
-        <a href="index.html" class="btn btn-primary"> Back to Home </a>
-      </div>
-    </section>
-  </body>
+<body>
+
+    <main class="thank-you">
+
+        <div class="thank-you-card">
+
+            <div
+                class="thank-you-icon"
+                aria-hidden="true"
+            >
+                ✓
+            </div>
+
+
+            <span class="section-label">
+                GOLDEN TOUCH CLEANING
+            </span>
+
+
+            <h1>
+                Thank You!
+            </h1>
+
+
+            <p>
+                Your quote request has been successfully sent.
+            </p>
+
+
+            <p>
+                We will review your information and contact you
+                shortly with your cleaning estimate.
+            </p>
+
+
+            <a
+                href="index.html"
+                class="btn btn-primary"
+            >
+                Back to Home
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <script>
+        const currentYear = document.getElementById("currentYear");
+
+        if (currentYear) {
+            currentYear.textContent = new Date().getFullYear();
+        }
+    </script>
+
+</body>
+
 </html>
