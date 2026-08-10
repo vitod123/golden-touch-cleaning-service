@@ -3282,52 +3282,6 @@ ul {
 
 /* ------------------------- */
 
-@media (max-width: 760px) {
-  html {
-    min-width: 1180px;
-  }
-
-  body {
-    min-width: 1180px;
-  }
-
-  /* ABOUT */
-  .about-hero {
-    width: 1180px !important;
-    min-width: 1180px !important;
-  }
-
-  .about-hero .hero-inner {
-    width: 1140px !important;
-    min-width: 1140px !important;
-    max-width: none !important;
-  }
-
-  .about-page-hero {
-    width: 1180px !important;
-    min-width: 1180px !important;
-  }
-
-  .about-values,
-  .about-story,
-  .about-team,
-  .about-cta,
-  .difference,
-  .quote {
-    width: 1180px !important;
-    min-width: 1180px !important;
-  }
-
-  .about-values .container,
-  .about-story .container,
-  .about-team .container,
-  .about-cta .container,
-  .difference .container,
-  .quote .container {
-    width: 1140px !important;
-    max-width: none !important;
-  }
-}
 
 /*--------*/
 
