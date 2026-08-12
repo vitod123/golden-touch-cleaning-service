@@ -970,7 +970,7 @@ ul {
 .gallery {
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 14px;
 }
@@ -978,7 +978,7 @@ ul {
 .gallery-card {
   position: relative;
 
-  height: 145px;
+  height: auto;
 
   overflow: hidden;
 
@@ -2748,16 +2748,17 @@ ul {
 
 .about-flower {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-start;
+  height: 100%;
 }
 
 .about-flower img {
-  width: 210px;
+  width: 260px;
   max-width: none;
   height: auto;
   display: block;
-  transform: translateX(-15px) translateY(25px);
+  transform: translateX(-100px);
 }
 
 .services-section .section-heading {
@@ -3387,4 +3388,65 @@ li {
   width: 100px;
   height: 100px;
   object-fit: contain;
+}
+
+
+
+
+/*  -------------- new --------------- */
+
+/* =====================================================
+   SMALL TEXT — SLIGHTLY BIGGER
+===================================================== */
+
+.service-content li {
+  font-size: 12px;
+}
+
+.service-content p {
+  font-size: 14px;
+}
+
+.why-item p {
+  font-size: 8px;
+}
+
+.review-card p {
+  font-size: 9px;
+}
+
+.contact-list > a,
+.contact-list > div {
+  font-size: 10px;
+}
+
+.contact-info > p {
+  font-size: 10px;
+}
+
+.contact-details a,
+.area-line {
+  font-size: 10px;
+}
+
+.footer-brand p {
+  font-size: 9px;
+}
+
+.footer-column a,
+.footer-column span {
+  font-size: 8px;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+  font-size: 8px;
+}
+
+.form-group label {
+  font-size: 8px;
+}
+
+.form-note {
+  font-size: 8px;
 }
