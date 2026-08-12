@@ -2758,7 +2758,7 @@ ul {
   max-width: none;
   height: auto;
   display: block;
-  transform: translateX(-100px);
+  transform: translateX(-150px);
 }
 
 .services-section .section-heading {
