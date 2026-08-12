@@ -2893,3 +2893,825 @@ ul {
         padding: 45px 20px;
     }
 }
+
+
+/* ---------- new ---------- */
+
+/* =====================================================
+   WHY CHOOSE US — ROUNDED GREEN CARD
+===================================================== */
+
+.why-section {
+    background: #ffffff;
+    padding: 22px 0;
+}
+
+.why-section-card {
+    position: relative;
+    overflow: hidden;
+
+    background: #004f4d;
+    border-radius: 26px;
+
+    padding: 28px 34px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 60, 58, 0.10);
+}
+
+/* subtle gold corner decoration */
+
+.why-section-card::before,
+.why-section-card::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+
+    border: 1px solid rgba(216, 171, 74, 0.45);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.why-section-card::before {
+    left: -75px;
+    top: -75px;
+}
+
+.why-section-card::after {
+    right: -75px;
+    bottom: -75px;
+}
+
+.why-grid {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* =====================================================
+   ABOUT FLOWER
+===================================================== */
+
+.about-image {
+    position: relative;
+}
+
+.about-flower {
+    position: absolute;
+
+    right: -35px;
+    bottom: -25px;
+
+    width: 170px;
+    height: 170px;
+
+    object-fit: contain;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+
+
+
+
+.services-section .section-heading {
+    max-width: 100%;
+}
+
+.services-section .section-heading h2 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.services-section .section-heading p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* =====================================================
+   HEADER LOGO
+===================================================== */
+
+.logo-image-link {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.site-logo {
+    display: block;
+
+    width: 205px;
+    height: 52px;
+
+    object-fit: contain;
+    object-position: left center;
+}
+
+.header .nav a {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.header-button {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+
+/* =====================================================
+   CONTACT FORM — COMPACT VERSION
+===================================================== */
+
+/* .contact-form-wrapper {
+    padding: 22px;
+}
+
+.contact-form-wrapper form {
+    gap: 8px;
+}
+
+.contact-form-wrapper h3 {
+    margin-bottom: 8px;
+}
+
+.contact-form-wrapper .form-section-title {
+    margin-top: 5px;
+    margin-bottom: 3px;
+
+    font-size: 11px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.contact-form-wrapper .form-group {
+    margin-bottom: 4px;
+}
+
+.contact-form-wrapper input,
+.contact-form-wrapper select {
+    height: 36px;
+    min-height: 36px;
+
+    padding: 7px 10px;
+
+    font-size: 12px;
+}
+
+.contact-form-wrapper textarea {
+    min-height: 58px;
+    height: 58px;
+
+    padding: 8px 10px;
+
+    font-size: 12px;
+    resize: vertical;
+}
+
+.contact-form-wrapper label {
+    font-size: 10px;
+    margin-bottom: 2px;
+}
+
+.contact-form-wrapper .form-row {
+    gap: 8px;
+}
+
+.contact-form-wrapper .form-submit {
+    margin-top: 7px;
+    min-height: 38px;
+}
+
+.contact-form-wrapper .form-note {
+    margin-top: 5px;
+    font-size: 10px;
+} */
+
+/* =====================================================
+   CONTACT FORM — COMPACT + ALIGNED
+   НЕ ЗМІНЮЄ ПОРЯДОК ПОЛІВ
+===================================================== */
+
+.contact-form-wrapper {
+    padding: 22px 30px;
+}
+
+.contact-form-wrapper form {
+    width: 100%;
+}
+
+/* TITLE */
+
+.contact-form-wrapper h3 {
+    margin: 0 0 16px;
+
+    color: var(--teal-dark);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+    line-height: 1;
+}
+
+
+/* QUESTION TITLES */
+
+.contact-form-wrapper .form-section-title {
+    margin: 7px 0 4px;
+
+    padding-bottom: 4px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--teal-dark);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+/* FORM GROUP */
+
+.contact-form-wrapper .form-group {
+    width: 100%;
+
+    margin-bottom: 7px;
+}
+
+
+/* LABEL */
+
+.contact-form-wrapper label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--teal-dark);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* INPUT + SELECT */
+
+.contact-form-wrapper input,
+.contact-form-wrapper select {
+    width: 100%;
+
+    height: 38px;
+    min-height: 38px;
+
+    padding: 8px 10px;
+
+    border: 1px solid var(--border);
+    border-radius: 4px;
+
+    background: #fbfdfd;
+
+    color: var(--text);
+
+    font-size: 11px;
+
+    outline: none;
+}
+
+
+/* TEXTAREA */
+
+.contact-form-wrapper textarea {
+    width: 100%;
+
+    height: 65px;
+    min-height: 65px;
+
+    padding: 8px 10px;
+
+    border: 1px solid var(--border);
+    border-radius: 4px;
+
+    background: #fbfdfd;
+
+    color: var(--text);
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    resize: vertical;
+
+    outline: none;
+}
+
+
+/* FOCUS */
+
+.contact-form-wrapper input:focus,
+.contact-form-wrapper select:focus,
+.contact-form-wrapper textarea:focus {
+    border-color: var(--teal);
+
+    box-shadow:
+        0 0 0 2px rgba(0,107,107,.08);
+}
+
+
+/* SELECT ARROW */
+
+.contact-form-wrapper select {
+    appearance: none;
+
+    cursor: pointer;
+
+    padding-right: 28px;
+
+    background-image:
+        linear-gradient(
+            45deg,
+            transparent 50%,
+            var(--teal) 50%
+        ),
+        linear-gradient(
+            135deg,
+            var(--teal) 50%,
+            transparent 50%
+        );
+
+    background-position:
+        calc(100% - 13px) 50%,
+        calc(100% - 9px) 50%;
+
+    background-size:
+        4px 4px,
+        4px 4px;
+
+    background-repeat: no-repeat;
+}
+
+
+/* BEDROOMS / BATHROOMS
+   залишаємо на своїх місцях */
+
+.contact-form-wrapper .form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+/* щоб обидва поля були абсолютно однакові */
+
+.contact-form-wrapper .form-row .form-group {
+    width: 100%;
+    min-width: 0;
+
+    margin-bottom: 7px;
+}
+
+
+/* BUTTON */
+
+.contact-form-wrapper .form-submit {
+    width: 100%;
+
+    margin-top: 6px;
+
+    min-height: 38px;
+
+    font-size: 9px;
+}
+
+
+/* NOTE */
+
+.contact-form-wrapper .form-note {
+    margin: 5px 0 0;
+
+    color: #465555;
+
+    font-size: 9px;
+
+    line-height: 1.4;
+
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   SERVICE MODAL LOGO
+===================================================== */
+
+.service-modal-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: 0;
+
+    width: 190px;
+    height: 70px;
+
+    margin: 0 auto 12px;
+}
+
+.modal-logo {
+    width: 180px;
+    height: 64px;
+
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   TEXT CONTRAST
+===================================================== */
+
+body {
+    color: #172525;
+}
+
+p,
+li {
+    color: #263535;
+}
+
+.service-content p,
+.service-content li {
+    color: #263535;
+}
+
+.about-content p {
+    color: #263535;
+}
+
+.why-item p {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.review-card p {
+    color: #202d2d;
+}
+
+.form-note {
+    color: #465555;
+}
+
+
+
+.service-content h3 {
+    color: #123f3d;
+    font-weight: 800;
+}
+
+.service-content p {
+    font-size: 13px;
+    line-height: 1.55;
+    font-weight: 500;
+}
+
+.service-content li {
+    font-size: 11px;
+    line-height: 1.45;
+    font-weight: 500;
+}
+
+
+.service-modal-content h2 {
+    color: #123f3d;
+    font-weight: 800;
+}
+
+.service-modal-content p,
+.service-modal-content li {
+    color: #202d2d;
+    font-weight: 500;
+}
+
+.service-modal-content p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.service-modal-content li {
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   ABOUT CTA — GREEN INSTEAD OF BROWN
+===================================================== */
+
+.about-cta {
+    background: #004f4d !important;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-cta::before,
+.about-cta::after {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid rgba(216, 171, 74, 0.35);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.about-cta::before {
+    left: -100px;
+    top: -100px;
+}
+
+.about-cta::after {
+    right: -100px;
+    bottom: -100px;
+}
+
+.about-cta-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.about-cta h2,
+.about-cta p {
+    color: #ffffff;
+}
+
+.about-cta h2 span {
+    color: #d8ab4a;
+}
+
+
+.about-cta {
+    background: #ffffff;
+    padding: 24px 0;
+}
+
+.about-cta-card {
+    position: relative;
+    overflow: hidden;
+
+    background: #004f4d;
+
+    border-radius: 26px;
+
+    padding: 38px 42px;
+}
+
+.about-cta-inner {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   QUOTE FORM — 2 FIELDS PER ROW
+===================================================== */
+
+.quote-form {
+    width: 100%;
+}
+
+.quote-form h3 {
+    margin: 0 0 14px;
+
+    color: var(--teal-dark);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+    line-height: 1;
+}
+
+.quote-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 16px;
+    row-gap: 8px;
+}
+
+.quote-field {
+    min-width: 0;
+}
+
+.quote-field.quote-full {
+    grid-column: 1 / -1;
+}
+
+.quote-field .form-section-title {
+    min-height: 26px;
+
+    display: flex;
+    align-items: flex-end;
+
+    margin: 0 0 5px;
+
+    padding-bottom: 4px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--teal-dark);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.quote-field input,
+.quote-field select,
+.quote-field textarea {
+    display: block;
+
+    width: 100%;
+
+    border: 1px solid var(--border);
+    border-radius: 4px;
+
+    background: #fbfdfd;
+
+    color: var(--text);
+
+    outline: none;
+}
+
+.quote-field input,
+.quote-field select {
+    height: 34px;
+
+    padding: 6px 10px;
+
+    font-size: 11px;
+}
+
+.quote-field textarea {
+    height: 55px;
+    min-height: 55px;
+
+    padding: 7px 10px;
+
+    font-size: 11px;
+
+    resize: vertical;
+}
+
+.quote-field input:focus,
+.quote-field select:focus,
+.quote-field textarea:focus {
+    border-color: var(--teal);
+
+    box-shadow:
+        0 0 0 2px rgba(0,107,107,.08);
+}
+
+.quote-field select {
+    appearance: none;
+
+    cursor: pointer;
+
+    padding-right: 27px;
+
+    background-image:
+        linear-gradient(
+            45deg,
+            transparent 50%,
+            var(--teal) 50%
+        ),
+        linear-gradient(
+            135deg,
+            var(--teal) 50%,
+            transparent 50%
+        );
+
+    background-position:
+        calc(100% - 13px) 50%,
+        calc(100% - 9px) 50%;
+
+    background-size:
+        4px 4px,
+        4px 4px;
+
+    background-repeat: no-repeat;
+}
+
+.quote-form .form-submit {
+    width: 100%;
+
+    margin-top: 10px;
+
+    min-height: 37px;
+
+    font-size: 9px;
+}
+
+.quote-form .form-note {
+    margin: 5px 0 0;
+
+    color: #465555;
+
+    font-size: 9px;
+
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+#serviceModalIcon img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}

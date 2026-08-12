@@ -181,14 +181,13 @@ const servicesInfo = {
 
   regular: {
 
-    icon: "✨",
+    icon: "assets/IMG-20260809-WA0012.jpg",
 
     label: "GENERAL CLEANING",
 
     title: "General Cleaning",
 
-    description:
-      "Perfect for regular maintenance and keeping your home fresh, clean, and comfortable.",
+    description: "Perfect for regular maintenance and keeping your home fresh, clean, and comfortable.",
 
     items: [
 
@@ -229,14 +228,13 @@ const servicesInfo = {
 
   deep: {
 
-    icon: "🧽",
+    icon: "assets/IMG-20260809-WA0012.jpg",
 
     label: "DEEP CLEANING",
 
     title: "Deep Cleaning",
 
-    description:
-      "A detailed top-to-bottom cleaning for homes that need extra attention.",
+    description: "A detailed top-to-bottom cleaning for homes that need extra attention.",
 
     items: [
 
@@ -281,15 +279,13 @@ const servicesInfo = {
 
   move: {
 
-    icon: "🏠",
+    icon: "assets/IMG-20260809-WA0012.jpg",
 
     label: "MOVE-IN / MOVE-OUT CLEANING",
 
-    title:
-      "Move-In / Move-Out Cleaning",
+    title: "Move-In / Move-Out Cleaning",
 
-    description:
-      "A thorough cleaning of an empty or mostly empty property before moving in or after moving out.",
+    description: "A thorough cleaning of an empty or mostly empty property before moving in or after moving out.",
 
     items: [
 
@@ -338,16 +334,13 @@ const servicesInfo = {
 
   airbnb: {
 
-    icon: "✦",
+    icon: "assets/IMG-20260809-WA0012.jpg",
 
-    label:
-      "AIRBNB / VACATION RENTAL CLEANING",
+    label: "AIRBNB / VACATION RENTAL CLEANING",
 
-    title:
-      "Airbnb / Vacation Rental Cleaning",
+    title: "Airbnb / Vacation Rental Cleaning",
 
-    description:
-      "Professional turnover cleaning to prepare your property for the next guests.",
+    description: "Professional turnover cleaning to prepare your property for the next guests.",
 
     items: [
 
@@ -409,8 +402,9 @@ document
       if (!service) return;
 
 
-      serviceModalIcon.textContent =
-        service.icon;
+      // serviceModalIcon.textContent = service.icon;
+      serviceModalIcon.innerHTML = `<img src="${service.icon}" alt="">`;
+
 
       serviceModalLabel.textContent =
         service.label;
