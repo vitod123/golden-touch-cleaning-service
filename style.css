@@ -3450,3 +3450,31 @@ li {
 .form-note {
   font-size: 8px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html,
+body {
+  overflow-x: clip;
+}
+
+.about-section {
+  overflow: hidden;
+}
