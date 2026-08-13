@@ -2481,7 +2481,7 @@ ul {
   justify-content: center;
 
   min-height: 52px;
-  padding: 0 20px;
+  padding: 0 16px;
 
   border: 1px solid #c49a43;
 
@@ -2490,7 +2490,7 @@ ul {
 
   font-family: "Montserrat", sans-serif;
 
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
 
   letter-spacing: 0.08em;
