@@ -1168,7 +1168,7 @@ ul {
 
   padding: 50px 0;
 
-  background: linear-gradient(120deg, #003c40, #006b6b);
+  /* background: linear-gradient(120deg, #003c40, #006b6b); */
 
   overflow: hidden;
 }
@@ -1444,7 +1444,7 @@ ul {
 .footer {
   padding: 38px 0 0;
 
-  background: #002f32;
+  /* background: #002f32; */
 
   color: white;
 }
