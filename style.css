@@ -1195,7 +1195,7 @@ ul {
 
   display: grid;
 
-  grid-template-columns: 0.82fr 1.18fr;
+  grid-template-columns: 1.18fr 0.82fr;
 
   gap: 50px;
 
@@ -1296,6 +1296,7 @@ ul {
 .contact-form-wrapper {
   padding: 25px;
   margin-bottom: 150px;
+      max-width: 550px;
 
   border-radius: 7px;
 
