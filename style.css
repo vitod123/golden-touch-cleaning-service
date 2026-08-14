@@ -3498,7 +3498,6 @@ body {
 
 .contact-footer {
   position: relative;
-
   width: 100%;
 
   background-image: url("./assets/IMG-20260813-WA0011.jpg");
@@ -3525,6 +3524,9 @@ body {
   .contact-footer {
     width: 1180px;
     min-width: 1180px;
+
+    background-size: auto 100%;
+    background-position: 40px center;
   }
 
   .contact-section,
