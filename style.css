@@ -3525,8 +3525,11 @@ body {
     width: 1180px;
     min-width: 1180px;
 
-    background-size: auto 100%;
-    background-position: 40px center;
+    /* НЕ auto 100% */
+    background-size: cover;
+
+    /* показуємо лівішу частину desktop-фону */
+    background-position: left center;
   }
 
   .contact-section,
