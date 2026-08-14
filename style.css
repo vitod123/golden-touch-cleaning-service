@@ -3480,3 +3480,31 @@ body {
 .about-section {
   overflow: hidden;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-footer {
+  position: relative;
+
+  width: 100%;
+
+  background-image: url("./assets/IMG-20260813-WA0011.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  color: white;
+}
