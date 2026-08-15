@@ -2179,6 +2179,7 @@ ul {
 .team-grid {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
+
   align-items: center;
   gap: 90px;
 
@@ -2791,7 +2792,7 @@ ul {
   display: block;
 
   width: 205px;
-  height: 52px;
+  height: 80px;
 
   object-fit: contain;
   object-position: left center;
