@@ -58,7 +58,7 @@
 
         <div class="resume-upload">
           <form
-            action="https://formsubmit.co/nataliyaboyko93@gmail.com"
+            action="https://formsubmit.co/nataliyaboyko93@gmail.com
             method="POST"
             enctype="multipart/form-data"
           >
@@ -79,52 +79,40 @@
               hidden
             />
 
-            <button
-              type="button"
-              class="resume-button"
-              onclick="document.getElementById('resumeFile').click()"
-            >
+            <button type="button" class="resume-button" id="resumeButton">
               <span>📎</span>
               SUBMIT YOUR RESUME
             </button>
 
             <div class="resume-file-name" id="resumeFileName"></div>
-
-            <button
-              type="submit"
-              class="resume-send-button"
-              id="resumeSendButton"
-              disabled
-            >
-              SEND RESUME
-            </button>
           </form>
         </div>
 
-<script>
-const resumeFile = document.getElementById("resumeFile");
-const resumeFileName = document.getElementById("resumeFileName");
-const resumeSendButton = document.getElementById("resumeSendButton");
+        <script>
+          const resumeFile = document.getElementById("resumeFile");
+          const resumeButton = document.getElementById("resumeButton");
+          const resumeFileName = document.getElementById("resumeFileName");
 
-resumeFile.addEventListener("change", function () {
-  if (this.files.length > 0) {
-    resumeFileName.textContent = this.files[0].name;
+          resumeButton.addEventListener("click", function () {
+            if (!resumeFile.files.length) {
+              resumeFile.click();
+              return;
+            }
 
-    resumeSendButton.disabled = false;
-    resumeSendButton.classList.add("active");
-  }
-});
-</script>
+            resumeButton.closest("form").submit();
+          });
 
+          resumeFile.addEventListener("change", function () {
+            if (this.files.length > 0) {
+              resumeFileName.textContent = this.files[0].name;
 
-
-
-
-
-
-
-
-
+              resumeButton.innerHTML = `
+      <span>✓</span>
+      SEND RESUME
+    `;
+            }
+          });
+        </script>
 
         <button
           class="menu-button"
