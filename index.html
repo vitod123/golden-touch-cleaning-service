@@ -56,36 +56,16 @@
 
         <!-- RESUME UPLOAD -->
 
+        <!-- RESUME UPLOAD -->
         <div class="resume-upload">
-          <form
-            action="https://formsubmit.co/nataliyaboyko93@gmail.com
-            method="POST"
-            enctype="multipart/form-data"
-          >
-            <input
-              type="hidden"
-              name="_subject"
-              value="New Resume Submission - Golden Touch Cleaning Service"
-            />
+          <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" hidden />
 
-            <input type="hidden" name="_captcha" value="false" />
+          <button type="button" class="resume-button" id="resumeButton">
+            <span>📎</span>
+            SUBMIT YOUR RESUME
+          </button>
 
-            <input
-              type="file"
-              name="resume"
-              id="resumeFile"
-              accept=".pdf,.doc,.docx"
-              required
-              hidden
-            />
-
-            <button type="button" class="resume-button" id="resumeButton">
-              <span>📎</span>
-              SUBMIT YOUR RESUME
-            </button>
-
-            <div class="resume-file-name" id="resumeFileName"></div>
-          </form>
+          <div class="resume-file-name" id="resumeFileName"></div>
         </div>
 
         <script>
@@ -93,18 +73,24 @@
           const resumeButton = document.getElementById("resumeButton");
           const resumeFileName = document.getElementById("resumeFileName");
 
+          /* CLICK BUTTON */
           resumeButton.addEventListener("click", function () {
+            /* No file selected → open file picker */
             if (!resumeFile.files.length) {
               resumeFile.click();
               return;
             }
 
-            resumeButton.closest("form").submit();
+            /* File selected → send it */
+            sendResume();
           });
 
+          /* FILE SELECTED */
           resumeFile.addEventListener("change", function () {
             if (this.files.length > 0) {
-              resumeFileName.textContent = this.files[0].name;
+              const file = this.files[0];
+
+              resumeFileName.textContent = file.name;
 
               resumeButton.innerHTML = `
       <span>✓</span>
@@ -112,6 +98,48 @@
     `;
             }
           });
+
+          /* SEND RESUME */
+          function sendResume() {
+            if (!resumeFile.files.length) {
+              return;
+            }
+
+            const form = document.createElement("form");
+
+            form.method = "POST";
+            form.action = "https://formsubmit.co/nataliyaboyko93@gmail.com";
+            form.enctype = "multipart/form-data";
+            form.style.display = "none";
+
+            /* Subject */
+            const subject = document.createElement("input");
+            subject.type = "hidden";
+            subject.name = "_subject";
+            subject.value =
+              "New Resume Submission - Golden Touch Cleaning Service";
+
+            /* Disable captcha */
+            const captcha = document.createElement("input");
+            captcha.type = "hidden";
+            captcha.name = "_captcha";
+            captcha.value = "false";
+
+            /* Add fields */
+            form.appendChild(subject);
+            form.appendChild(captcha);
+
+            /*
+    IMPORTANT:
+    Move the selected file input into the temporary form.
+  */
+            form.appendChild(resumeFile);
+
+            document.body.appendChild(form);
+
+            /* Submit */
+            form.submit();
+          }
         </script>
 
         <button
