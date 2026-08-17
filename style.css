@@ -3573,3 +3573,140 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   RESUME BUTTON — SAME STYLE AS HEADER BUTTON
+===================================================== */
+
+.resume-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 38px;
+
+  padding: 10px 17px;
+
+  border: 0;
+  border-radius: 4px;
+
+  background: var(--teal);
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.resume-button:hover {
+  background: var(--teal-dark);
+  transform: translateY(-1px);
+}
+
+.resume-button span {
+  color: var(--gold-light);
+
+  font-size: 15px;
+
+  line-height: 1;
+}
+
+
+/* FILE NAME */
+
+.resume-file-name {
+  margin-top: 7px;
+
+  color: var(--muted);
+
+  font-size: 10px;
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+
+/* SEND BUTTON */
+
+.resume-send-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+
+  padding: 10px 17px;
+
+  border: 0;
+  border-radius: 4px;
+
+  background: var(--teal);
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.resume-send-button:hover:not(:disabled) {
+  background: var(--teal-dark);
+  transform: translateY(-1px);
+}
+
+.resume-send-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.resume-send-button {
+  display: none;
+}
+
+.resume-send-button.active {
+  display: inline-flex;
+}

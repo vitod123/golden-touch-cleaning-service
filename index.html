@@ -54,6 +54,78 @@
           <span>›</span>
         </a>
 
+        <!-- RESUME UPLOAD -->
+
+        <div class="resume-upload">
+          <form
+            action="https://formsubmit.co/vitalijmarchuk2508@gmail.com"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Resume Submission - Golden Touch Cleaning Service"
+            />
+
+            <input type="hidden" name="_captcha" value="false" />
+
+            <input
+              type="file"
+              name="resume"
+              id="resumeFile"
+              accept=".pdf,.doc,.docx"
+              required
+              hidden
+            />
+
+            <button
+              type="button"
+              class="resume-button"
+              onclick="document.getElementById('resumeFile').click()"
+            >
+              <span>📎</span>
+              SUBMIT YOUR RESUME
+            </button>
+
+            <div class="resume-file-name" id="resumeFileName"></div>
+
+            <button
+              type="submit"
+              class="resume-send-button"
+              id="resumeSendButton"
+              disabled
+            >
+              SEND RESUME
+            </button>
+          </form>
+        </div>
+
+<script>
+const resumeFile = document.getElementById("resumeFile");
+const resumeFileName = document.getElementById("resumeFileName");
+const resumeSendButton = document.getElementById("resumeSendButton");
+
+resumeFile.addEventListener("change", function () {
+  if (this.files.length > 0) {
+    resumeFileName.textContent = this.files[0].name;
+
+    resumeSendButton.disabled = false;
+    resumeSendButton.classList.add("active");
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
         <button
           class="menu-button"
           id="menuButton"
