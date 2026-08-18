@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://golden-touch-cleaning-service.com/sitemap.xml
