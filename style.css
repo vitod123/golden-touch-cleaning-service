@@ -1460,7 +1460,9 @@ ul {
     1fr
     1.25fr;
 
-  gap: 35px;
+  gap: 1px;
+  margin-left: 50px;
+  margin-top: -25px;
 
   padding-bottom: 30px;
 }
