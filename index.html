@@ -10,7 +10,7 @@
       content="Golden Touch Cleaning Service provides professional residential and commercial cleaning services."
     />
 
-    <link rel="shortcut icon" href="./assets/il.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/il.png" type="image/x-icon" />
 
     <title>
       Golden Touch Cleaning Service | Professional Cleaning Services
@@ -64,7 +64,7 @@
 
           <button type="button" class="resume-button" id="resumeButton">
             <span>📎</span>
-            SUBMIT YOUR RESUME
+            Join our team
           </button>
 
           <div class="resume-file-name" id="resumeFileName"></div>
@@ -95,9 +95,9 @@
               resumeFileName.textContent = file.name;
 
               resumeButton.innerHTML = `
-      <span>✓</span>
-      SEND RESUME
-    `;
+        <span>✓</span>
+        SEND RESUME
+      `;
             }
           });
 
@@ -110,39 +110,57 @@
             const form = document.createElement("form");
 
             form.method = "POST";
+
             form.action = "https://formsubmit.co/nataliyaboyko93@gmail.com";
+
             form.enctype = "multipart/form-data";
+
             form.style.display = "none";
 
-            /* Subject */
+            /* EMAIL SUBJECT */
             const subject = document.createElement("input");
+
             subject.type = "hidden";
             subject.name = "_subject";
+
             subject.value =
               "New Resume Submission - Golden Touch Cleaning Service";
 
-            /* Disable captcha */
+            /* DISABLE CAPTCHA */
             const captcha = document.createElement("input");
+
             captcha.type = "hidden";
             captcha.name = "_captcha";
+
             captcha.value = "false";
 
-            /* Add fields */
+            /* SUCCESS PAGE */
+            const nextPage = document.createElement("input");
+
+            nextPage.type = "hidden";
+            nextPage.name = "_next";
+
+            nextPage.value =
+              "https://golden-touch-cleaning-service.com/resume-thank-you.html";
+
+            /* ADD SETTINGS */
             form.appendChild(subject);
             form.appendChild(captcha);
+            form.appendChild(nextPage);
 
             /*
-    IMPORTANT:
-    Move the selected file input into the temporary form.
-  */
+      Move selected file into the form
+    */
             form.appendChild(resumeFile);
 
+            /* ADD FORM TO PAGE */
             document.body.appendChild(form);
 
-            /* Submit */
+            /* SEND */
             form.submit();
           }
         </script>
+
 
         <button
           class="menu-button"
@@ -520,6 +538,10 @@
             team is here to help.
           </p>
 
+          <p>
+            <a href="tel:+17782125997">Tel: +1 (778) 212-5997 </a>
+          </p>
+
           <div class="contact-details"></div>
 
           <a href="#contact" class="btn btn-primary">
@@ -694,7 +716,7 @@
                 <input
                   type="hidden"
                   name="_next"
-                  value="https://vitod123.github.io/golden-touch-cleaning-service/thank-you.html"
+                  value="https://golden-touch-cleaning-service.com/thank-you.html"
                 />
 
                 <h3>REQUEST A FREE QUOTE</h3>
