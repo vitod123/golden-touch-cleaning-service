@@ -1455,7 +1455,7 @@ ul {
   display: grid;
 
   grid-template-columns:
-    0.85fr
+    1.25fr
     1.60fr
     1fr
     1.25fr;
