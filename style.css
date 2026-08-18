@@ -1451,12 +1451,26 @@ ul {
   color: white;
 }
 
-.footer-grid {
+.footer-grid1 {
   display: grid;
 
   grid-template-columns:
     0.85fr
     1.60fr
+    1fr
+    1.25fr;
+
+  gap: 35px;
+
+  padding-bottom: 30px;
+}
+
+.footer-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.45fr
+    1fr
     1fr
     1.25fr;
 
