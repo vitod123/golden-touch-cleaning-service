@@ -181,7 +181,7 @@ const servicesInfo = {
 
   regular: {
 
-    icon: "assets/IMG-20260809-WA0012.jpg",
+    icon: "assets/il.png",
 
     label: "GENERAL CLEANING",
 
@@ -228,7 +228,7 @@ const servicesInfo = {
 
   deep: {
 
-    icon: "assets/IMG-20260809-WA0012.jpg",
+    icon: "assets/il.png",
 
     label: "DEEP CLEANING",
 
@@ -279,7 +279,7 @@ const servicesInfo = {
 
   move: {
 
-    icon: "assets/IMG-20260809-WA0012.jpg",
+    icon: "assets/il.png",
 
     label: "MOVE-IN / MOVE-OUT CLEANING",
 
@@ -334,7 +334,7 @@ const servicesInfo = {
 
   airbnb: {
 
-    icon: "assets/IMG-20260809-WA0012.jpg",
+    icon: "assets/il.png",
 
     label: "AIRBNB / VACATION RENTAL CLEANING",
 
