@@ -281,7 +281,7 @@ const servicesInfo = {
 
     icon: "assets/il.png",
 
-    label: "MOVE-IN / MOVE-OUT CLEANING",
+    label: "MOVE-IN / MOVE-OUT CLEANING / POST CONSTRUCTION",
 
     title: "Move-In / Move-Out Cleaning",
 
