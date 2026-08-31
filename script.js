@@ -281,9 +281,9 @@ const servicesInfo = {
 
     icon: "assets/il.png",
 
-    label: "MOVE-IN / MOVE-OUT CLEANING / POST CONSTRUCTION",
+    label: "MOVE-IN / MOVE-OUT / POST CONSTRUCTION CLEANING",
 
-    title: "Move-In / Move-Out Cleaning",
+    title: "Move-In / Move-Out / POST CONSTRUCTION CLEANING",
 
     description: "A thorough cleaning of an empty or mostly empty property before moving in or after moving out.",
 
