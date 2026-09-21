@@ -1454,16 +1454,20 @@ ul {
 .footer-grid1 {
   display: grid;
 
-  grid-template-columns:
+  /* grid-template-columns:
     1.25fr
     1.60fr
     1fr
-    1.25fr;
+    1.25fr; */
+
+    grid-template-columns: 0.85fr 1.60fr 1.40fr 1.25fr;
 
   gap: 1px;
   margin-left: 60px !important;
 
   padding-bottom: 30px;
+
+      margin-top: -55px;
 }
 
 .footer-grid {
@@ -2398,7 +2402,7 @@ ul {
 .about-cta-contact span {
   color: rgba(255, 255, 255, 0.7);
 
-  font-size: 13px;
+  font-size: 18px;
   text-decoration: none;
 
   transition: color 0.25s ease;
