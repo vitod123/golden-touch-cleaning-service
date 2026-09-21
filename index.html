@@ -911,11 +911,16 @@
             </div> -->
 
             <div class="contact-form-wrapper">
-              <form
+              <!-- <form
                 action="https://formsubmit.co/nataliyaboyko93@gmail.com"
                 method="POST"
                 class="quote-form"
-              >
+              > -->
+              <form
+                id="quote-form"
+                method="POST"
+                class="quote-form"
+                >
                 <input
                   type="hidden"
                   name="_subject"
@@ -928,6 +933,16 @@
                   name="_next"
                   value="https://golden-touch-cleaning-service.com/thank-you.html"
                 />
+
+                <script>
+  const form = document.getElementById("quote-form");
+
+  const a = "nataliyaboyko93";
+  const b = "gmail";
+  const c = "com";
+
+  form.action = "https://formsubmit.co/" + a + "@" + b + "." + c;
+</script>
 
                 <h3>REQUEST A FREE QUOTE</h3>
 
