@@ -117,7 +117,11 @@
 
             form.method = "POST";
 
-            form.action = "https://formsubmit.co/nataliyaboyko93@gmail.com";
+            const a1 = "nataliyaboyko93";
+            const b1 = "gmail";
+            const c1 = "com";
+
+            form.action = "https://formsubmit.co/" + a1 + "@" + b1 + "." + c1;
 
             form.enctype = "multipart/form-data";
 
@@ -432,81 +436,6 @@
      ABOUT
 ===================================================== -->
 
-      <!-- <section class="section about-section" id="about">
-        <div class="container">
-          <div class="about-grid">
-            <div class="about-image">
-              <img
-                src="./assets/IMG-20260809-WA0001.jpg"
-                alt="Professional Golden Touch cleaner"
-              />
-
-              <img
-                src="./assets/IMG-20260811-WA0019.jpg"
-                alt=""
-                class="about-flower"
-              />
-
-              <div class="about-badge">
-                <div class="badge-icon">♕</div>
-
-                <div>
-                  <strong>PROFESSIONAL</strong>
-                  <span>RELIABLE<br />DETAIL-ORIENTED</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="about-content">
-              <span class="section-label"> ABOUT US </span>
-
-              <h2>
-                CLEANING WITH CARE,
-                <span>FOCUSING ON YOU.</span>
-              </h2>
-
-              <p>
-                At Golden Touch Cleaning, we believe that a clean space leads to
-                a happier, healthier life. We are passionate about excellence
-                and attention to detail.
-              </p>
-
-              <p>
-                Whether you need your home cleaned or your business refreshed,
-                our team is here to help.
-              </p>
-
-              <div class="contact-details">
-                <a href="tel:+17782125997">
-                  <span>☎</span>
-                  +1 (778) 212-5997
-                </a>
-
-                <a href="mailto:nataliyaboyko93@gmail.com">
-                  <span>✉</span>
-                  nataliyaboyko93@gmail.com
-                </a>
-
-                <div class="area-line">
-                  <span>⌖</span>
-                  Vernon, Kelowna & Surrounding Areas
-                </div>
-              </div>
-
-              <a href="#contact" class="btn btn-primary">
-                GET A FREE QUOTE
-                <span>›</span>
-              </a>
-            </div>
-
-            <img
-              src="./assets/IMG-20260811-WA0019.jpg"
-              alt=""
-              class="about-flower"
-            />
-          </div>
-        </div>
-      </section> -->
 
       <div class="about-grid">
         <div class="about-image">
@@ -685,7 +614,7 @@
                   </div>
                 </a>
 
-                <a href="mailto:nataliyaboyko93@gmail.com">
+                <a href="">
                   <span class="contact-icon"></span>
 
                   <div>
@@ -705,217 +634,8 @@
 
             <!-- FORM -->
 
-            <!-- <div class="contact-form-wrapper">
-              <form
-                action="https://formsubmit.co/nataliyaboyko93@gmail.com"
-                method="POST"
-                class="quote-form"
-              >
-                <input
-                  type="hidden"
-                  name="_subject"
-                  value="New Golden Touch Cleaning Service Quote"
-                />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="true" />
-                <input
-                  type="hidden"
-                  name="_next"
-                  value="https://golden-touch-cleaning-service.com/thank-you.html"
-                />
-
-                <h3>REQUEST A FREE QUOTE</h3> 
-
-                <div class="quote-grid">
-                  <div class="quote-field">
-                    <div class="form-section-title">
-                      1. What type of cleaning do you need?
-                    </div>
-                    <select name="Cleaning Type" required>
-                      <option value="">Select cleaning type</option>
-                      <option value="General Cleaning">General Cleaning</option>
-                      <option value="Deep Cleaning">Deep Cleaning</option>
-                      <option value="Move-In / Move-Out">
-                        Move-In / Move-Out
-                      </option>
-                      <option value="Post-Construction Cleaning">
-                        Post-Construction Cleaning
-                      </option>
-                      <option value="Commercial Cleaning">
-                        Commercial Cleaning
-                      </option>
-                      <option value="Airbnb / Vacation Rental">
-                        Airbnb / Vacation Rental
-                      </option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-
-                  <div class="quote-field">
-                    <div class="form-section-title">
-                      2. What is the property type?
-                    </div>
-                    <select name="Property Type" required>
-                      <option value="">Select property type</option>
-                      <option value="House">House</option>
-                      <option value="Apartment / Condo">
-                        Apartment / Condo
-                      </option>
-                      <option value="Townhouse">Townhouse</option>
-                      <option value="Commercial">Commercial</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-
-                  <div class="quote-field">
-                    <div class="form-section-title">3. Bedrooms</div>
-                    <select name="Bedrooms" required>
-                      <option value="">Select</option>
-                      <option value="Studio / 0">Studio / 0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5+">5+</option>
-                    </select>
-                  </div>
-
-                  <div class="quote-field">
-                    <div class="form-section-title">3. Bathrooms</div>
-                    <select name="Bathrooms" required>
-                      <option value="">Select</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5+">5+</option>
-                    </select>
-                  </div>
-
-                  <div class="quote-field">
-                    <div class="form-section-title">
-                      4. Approximately how many square feet?
-                    </div>
-                    <input
-                      type="number"
-                      name="Property Size (sq ft)"
-                      placeholder="Example: 1800"
-                      min="1"
-                      required
-                    />
-                  </div>
-
-                  <div class="quote-field">
-                    <div class="form-section-title">
-                      5. How often would you like cleaning?
-                    </div>
-                    <select name="Cleaning Frequency" required>
-                      <option value="">Select frequency</option>
-                      <option value="One-time">One-time</option>
-                      <option value="Weekly">Weekly</option>
-                      <option value="Every 2 weeks">Every 2 weeks</option>
-                      <option value="Monthly">Monthly</option>
-                    </select>
-                  </div>
-
-                  <div class="quote-field">
-                    <div class="form-section-title">6. Do you have pets?</div>
-                    <select name="Pets" required>
-                      <option value="">Please select</option>
-                      <option value="Yes">Yes</option>
-                      <option value="No">No</option>
-                    </select>
-                  </div>
-
-                  <div class="quote-field">
-                    <div class="form-section-title">7. Property address</div>
-                    <input
-                      type="text"
-                      name="Property Address"
-                      placeholder="Street address, City, State"
-                      autocomplete="street-address"
-                      required
-                    />
-                  </div>
-
-                
-                  <div class="quote-field">
-                    <div class="form-section-title">8. First Name</div>
-                    <input
-                      type="text"
-                      name="First Name"
-                      placeholder="John"
-                      autocomplete="given-name"
-                      required
-                    />
-                  </div>
-
-                  
-                  <div class="quote-field">
-                    <div class="form-section-title">8. Last Name</div>
-                    <input
-                      type="text"
-                      name="Last Name"
-                      placeholder="Smith"
-                      autocomplete="family-name"
-                      required
-                    />
-                  </div>
-
-                  
-                  <div class="quote-field">
-                    <div class="form-section-title">9. Phone Number</div>
-                    <input
-                      type="tel"
-                      name="Phone Number"
-                      placeholder="+1 (555) 123-4567"
-                      autocomplete="tel"
-                      required
-                      title="Please enter a valid phone number."
-                    />
-                  </div>
-
-                  
-                  <div class="quote-field">
-                    <div class="form-section-title">9. Email Address</div>
-                    <input
-                      type="email"
-                      name="Email Address"
-                      placeholder="john@example.com"
-                      autocomplete="email"
-                      required
-                      title="Please enter a valid email address."
-                    />
-                  </div>
-
-                  <div class="quote-field quote-full">
-                    <div class="form-section-title">
-                      Anything else we should know?
-                    </div>
-                    <textarea
-                      name="Additional Information"
-                      rows="3"
-                      placeholder="Tell us anything else about the property or cleaning needs..."
-                    ></textarea>
-                  </div>
-                </div>
-
-                <button type="submit" class="btn btn-primary form-submit">
-                  SEND REQUEST
-                </button>
-
-                <p class="form-note">
-                  We'll review your request and contact you with a quote.
-                </p>
-              </form>
-            </div> -->
-
             <div class="contact-form-wrapper">
-              <!-- <form
-                action="https://formsubmit.co/nataliyaboyko93@gmail.com"
-                method="POST"
-                class="quote-form"
-              > -->
+
               <form
                 id="quote-form"
                 method="POST"
@@ -1083,67 +803,7 @@
               </form>
             </div>
 
-            <!-- <script>
-              const form = document.querySelector(".quote-form");
-              const phoneInput = form.querySelector(
-                'input[name="Phone Number"]',
-              );
-              const emailInput = form.querySelector(
-                'input[name="Email Address"]',
-              );
 
-              // Phone validation
-              // No pattern or minlength is used.
-              // The validation checks the actual number of digits.
-              function validatePhone() {
-                const phone = phoneInput.value.trim();
-                const digitsOnly = phone.replace(/\D/g, "");
-
-                if (digitsOnly.length < 10) {
-                  phoneInput.setCustomValidity(
-                    "Please enter a valid phone number.",
-                  );
-                } else {
-                  phoneInput.setCustomValidity("");
-                }
-              }
-
-              // Email validation
-              function validateEmail() {
-                if (emailInput.value.trim() === "") {
-                  emailInput.setCustomValidity("");
-                  return;
-                }
-
-                if (!emailInput.validity.valid) {
-                  emailInput.setCustomValidity(
-                    "Please enter a valid email address.",
-                  );
-                } else {
-                  emailInput.setCustomValidity("");
-                }
-              }
-
-              // Validate while typing
-              phoneInput.addEventListener("input", validatePhone);
-              emailInput.addEventListener("input", validateEmail);
-
-              // Validate when leaving the field
-              phoneInput.addEventListener("blur", validatePhone);
-              emailInput.addEventListener("blur", validateEmail);
-
-              // Final validation before sending
-              form.addEventListener("submit", function (event) {
-                validatePhone();
-                validateEmail();
-
-                if (!form.checkValidity()) {
-                  event.preventDefault();
-                  form.reportValidity();
-                }
-              });
-            </script> -->
-   
 <script>
   const form = document.querySelector(".quote-form");
   const phone = form.querySelector('input[name="Phone Number"]');
